@@ -1,0 +1,89 @@
+# ELECTRON
+/gun/particle e-
+/configurationFile/PARTICLE_ID 0
+/particleEnergyRandom/Ek_min 0.0001
+/particleEnergyRandom/Ek_max 7
+
+
+/configurationFile/CONFIGURATION_FILE 0
+/configuration/CONFIGURATION 0
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+/configurationFile/CONFIGURATION_FILE 1
+/configuration/CONFIGURATION 1
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+/configurationFile/CONFIGURATION_FILE 2
+/configuration/CONFIGURATION 2
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+# PROTON 
+
+/gun/particle proton
+/configurationFile/PARTICLE_ID 1
+/particleEnergyRandom/Ek_min 0.0001
+/particleEnergyRandom/Ek_max 40
+
+
+/configurationFile/CONFIGURATION_FILE 0
+/configuration/CONFIGURATION 0
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+/configurationFile/CONFIGURATION_FILE 1
+/configuration/CONFIGURATION 1
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+/configurationFile/CONFIGURATION_FILE 2
+/configuration/CONFIGURATION 2
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+# HELIUM alpha
+
+/gun/particle geantino
+/configurationFile/PARTICLE_ID 2
+/particleEnergyRandom/Ek_min 0.0001
+/particleEnergyRandom/Ek_max 120
+
+
+/configurationFile/CONFIGURATION_FILE 0
+/configuration/CONFIGURATION 0
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+/configurationFile/CONFIGURATION_FILE 1
+/configuration/CONFIGURATION 1
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+/configurationFile/CONFIGURATION_FILE 2
+/configuration/CONFIGURATION 2
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+# GAMMA
+/gun/particle gamma
+/configurationFile/PARTICLE_ID 3
+/particleEnergyRandom/Ek_min 10.
+/particleEnergyRandom/Ek_max 100.
+
+
+/configurationFile/CONFIGURATION_FILE 0
+/configuration/CONFIGURATION 0
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+/configurationFile/CONFIGURATION_FILE 1
+/configuration/CONFIGURATION 1
+/run/reinitializeGeometry
+/run/beamOn 2000000
+
+/configurationFile/CONFIGURATION_FILE 2
+/configuration/CONFIGURATION 2
+/run/reinitializeGeometry
+/run/beamOn 2000000

@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <define>
+    <matrix coldim="2" name="RINDEX0x55f6bc02ae40" values="3.1 1.58 2.91765 1.58 2.48 1.58"/>
+    <matrix coldim="2" name="GROUPVEL0x55f6bc02af00" values="2.48 189.742 3.00882 189.742 3.1 189.742"/>
+    <matrix coldim="2" name="ABSLENGTH0x55f6bc02b060" values="3.1 3800 2.91765 3800 2.48 3800"/>
+    <matrix coldim="2" name="RINDEX0x55f6bc02abc0" values="3.1 3.88163 2.91765 3.88163 2.48 3.88163"/>
+    <matrix coldim="2" name="GROUPVEL0x55f6bc02ac60" values="2.48 77.2337 3.00882 77.2337 3.1 77.2337"/>
+    <matrix coldim="2" name="ABSLENGTH0x55f6bc02ada0" values="3.1 0.0001 2.91765 0.0001 2.48 0.0001"/>
+    <matrix coldim="2" name="RINDEX0x55f6bc011520" values="3.1 1 2.91765 1 2.48 1"/>
+    <matrix coldim="2" name="GROUPVEL0x55f6bc02aa60" values="2.48 299.792 3.00882 299.792 3.1 299.792"/>
+    <matrix coldim="2" name="RINDEX0x55f6bc02b3c0" values="3.1 3.88163 2.91765 3.88163 2.48 3.88163"/>
+    <matrix coldim="2" name="GROUPVEL0x55f6bc02b480" values="2.48 77.2337 3.00882 77.2337 3.1 77.2337"/>
+    <matrix coldim="2" name="ABSLENGTH0x55f6bc02b5e0" values="3.1 0.0001 2.91765 0.0001 2.48 0.0001"/>
+  </define>
+
+  <materials>
+    <isotope N="12" Z="6" name="C120x55f6bc019cf0">
+      <atom unit="g/mole" value="12"/>
+    </isotope>
+    <isotope N="13" Z="6" name="C130x55f6bc019d40">
+      <atom unit="g/mole" value="13.0034"/>
+    </isotope>
+    <element name="C0x55f6bc019de0">
+      <fraction n="0.9893" ref="C120x55f6bc019cf0"/>
+      <fraction n="0.0107" ref="C130x55f6bc019d40"/>
+    </element>
+    <isotope N="1" Z="1" name="H10x55f6bc019f20">
+      <atom unit="g/mole" value="1.00782503081372"/>
+    </isotope>
+    <isotope N="2" Z="1" name="H20x55f6bc019f70">
+      <atom unit="g/mole" value="2.01410199966617"/>
+    </isotope>
+    <element name="H0x55f6bc019fc0">
+      <fraction n="0.999885" ref="H10x55f6bc019f20"/>
+      <fraction n="0.000115" ref="H20x55f6bc019f70"/>
+    </element>
+    <material name="G4_PLASTIC_SC_VINYLTOLUENE0x55f6bc019b80" state="solid">
+      <property name="RINDEX" ref="RINDEX0x55f6bc02ae40"/>
+      <property name="GROUPVEL" ref="GROUPVEL0x55f6bc02af00"/>
+      <property name="ABSLENGTH" ref="ABSLENGTH0x55f6bc02b060"/>
+      <T unit="K" value="293.15"/>
+      <MEE unit="eV" value="64.7"/>
+      <D unit="g/cm3" value="1.032"/>
+      <fraction n="0.914708531800025" ref="C0x55f6bc019de0"/>
+      <fraction n="0.0852914681999746" ref="H0x55f6bc019fc0"/>
+    </material>
+    <isotope N="28" Z="14" name="Si280x55f6bc012180">
+      <atom unit="g/mole" value="27.9769"/>
+    </isotope>
+    <isotope N="29" Z="14" name="Si290x55f6bc0121d0">
+      <atom unit="g/mole" value="28.9765"/>
+    </isotope>
+    <isotope N="30" Z="14" name="Si300x55f6bc012220">
+      <atom unit="g/mole" value="29.9738"/>
+    </isotope>
+    <element name="Si0x55f6bc012270">
+      <fraction n="0.922296077703922" ref="Si280x55f6bc012180"/>
+      <fraction n="0.0468319531680468" ref="Si290x55f6bc0121d0"/>
+      <fraction n="0.0308719691280309" ref="Si300x55f6bc012220"/>
+    </element>
+    <material name="Si0x55f6bc0123d0" state="solid">
+      <property name="RINDEX" ref="RINDEX0x55f6bc02abc0"/>
+      <property name="GROUPVEL" ref="GROUPVEL0x55f6bc02ac60"/>
+      <property name="ABSLENGTH" ref="ABSLENGTH0x55f6bc02ada0"/>
+      <T unit="K" value="293.15"/>
+      <MEE unit="eV" value="173"/>
+      <D unit="g/cm3" value="2.328"/>
+      <fraction n="1" ref="Si0x55f6bc012270"/>
+    </material>
+    <material name="G4_Galactic0x55f6bc020040" state="gas">
+      <property name="RINDEX" ref="RINDEX0x55f6bc011520"/>
+      <property name="GROUPVEL" ref="GROUPVEL0x55f6bc02aa60"/>
+      <T unit="K" value="2.73"/>
+      <P unit="pascal" value="3e-18"/>
+      <MEE unit="eV" value="21.8"/>
+      <D unit="g/cm3" value="1e-25"/>
+      <fraction n="1" ref="H0x55f6bc019fc0"/>
+    </material>
+    <material Z="13" name="G4_Al0x55f6bc0207b0" state="solid">
+      <property name="RINDEX" ref="RINDEX0x55f6bc02b3c0"/>
+      <property name="GROUPVEL" ref="GROUPVEL0x55f6bc02b480"/>
+      <property name="ABSLENGTH" ref="ABSLENGTH0x55f6bc02b5e0"/>
+      <T unit="K" value="293.15"/>
+      <MEE unit="eV" value="166"/>
+      <D unit="g/cm3" value="2.699"/>
+      <atom unit="g/mole" value="26.9815"/>
+    </material>
+    <isotope N="16" Z="8" name="O160x55f6bc020b00">
+      <atom unit="g/mole" value="15.9949"/>
+    </isotope>
+    <isotope N="17" Z="8" name="O170x55f6bc020ab0">
+      <atom unit="g/mole" value="16.9991"/>
+    </isotope>
+    <isotope N="18" Z="8" name="O180x55f6bc021010">
+      <atom unit="g/mole" value="17.9992"/>
+    </isotope>
+    <element name="O0x55f6bc01b5e0">
+      <fraction n="0.99757" ref="O160x55f6bc020b00"/>
+      <fraction n="0.00038" ref="O170x55f6bc020ab0"/>
+      <fraction n="0.00205" ref="O180x55f6bc021010"/>
+    </element>
+    <material name="G4_BAKELITE0x55f6bc020ed0" state="solid">
+      <T unit="K" value="293.15"/>
+      <MEE unit="eV" value="72.4"/>
+      <D unit="g/cm3" value="1.25"/>
+      <fraction n="0.057441" ref="H0x55f6bc019fc0"/>
+      <fraction n="0.774591" ref="C0x55f6bc019de0"/>
+      <fraction n="0.167968" ref="O0x55f6bc01b5e0"/>
+    </material>
+  </materials>
+
+  <solids>
+    <box lunit="mm" name="solidScintVeto0x55f6bc7d7340" x="57" y="57" z="8"/>
+    <tube aunit="deg" deltaphi="360" lunit="mm" name="solidSiDetThin0x55f6bc7f1ef0" rmax="1" rmin="0" startphi="0" z="0.1"/>
+    <tube aunit="deg" deltaphi="360" lunit="mm" name="solidSiDetThick0x55f6bc7e0a50" rmax="1" rmin="0" startphi="0" z="0.5"/>
+    <tube aunit="deg" deltaphi="360" lunit="mm" name="solidHoleVisualization0x55f6bc7d6aa0" rmax="1" rmin="0" startphi="0" z="200"/>
+    <box lunit="mm" name="solidDrilledAl00x55f6bc7dfbc0" x="100" y="100" z="8"/>
+    <box lunit="mm" name="solidDrilledAl1Ext0x55f6bc7dfb40" x="100" y="100" z="68.8"/>
+    <box lunit="mm" name="solidDrilledAl1Int0x55f6bc7f0e30" x="86" y="86" z="68.81"/>
+    <subtraction name="solidDrilledAl10x55f6bc7f0f70">
+      <first ref="solidDrilledAl1Ext0x55f6bc7dfb40"/>
+      <second ref="solidDrilledAl1Int0x55f6bc7f0e30"/>
+    </subtraction>
+    <union name="solidDrilledAl0x55f6bc7ce110">
+      <first ref="solidDrilledAl00x55f6bc7dfbc0"/>
+      <second ref="solidDrilledAl10x55f6bc7f0f70"/>
+      <position name="solidDrilledAl0x55f6bc7ce110_pos" unit="mm" x="0" y="0" z="36.9"/>
+    </union>
+    <tube aunit="deg" deltaphi="360" lunit="mm" name="solidHoleLong0x55f6bc7d4870" rmax="1" rmin="0" startphi="0" z="100"/>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7eab80">
+      <first ref="solidDrilledAl0x55f6bc7ce110"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7eab80_pos" unit="mm" x="0" y="0" z="17.2"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7eb540">
+      <first ref="solidFinalDrilledAl0x55f6bc7eab80"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7eb540_pos" unit="mm" x="20" y="0" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7eb540_rot" unit="deg" x="0" y="-20.5" z="0"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7efd80">
+      <first ref="solidFinalDrilledAl0x55f6bc7eb540"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7efd80_pos" unit="mm" x="19.5324111142017" y="4.29940880422048" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7efd80_rot" unit="deg" x="5.42436522058808" y="-23.2416707506719" z="-1.11631671856981"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7faf90">
+      <first ref="solidFinalDrilledAl0x55f6bc7efd80"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7faf90_pos" unit="mm" x="18.1515083934191" y="8.39778203120529" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7faf90_rot" unit="deg" x="12.080234970027" y="-24.3398083796434" z="-2.61443818700146"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7dd820">
+      <first ref="solidFinalDrilledAl0x55f6bc7faf90"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7dd820_pos" unit="mm" x="15.9218613141129" y="12.1034843038753" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7dd820_rot" unit="deg" x="19.1731962226245" y="-23.366056619094" z="-4.00044573570929"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7eec70">
+      <first ref="solidFinalDrilledAl0x55f6bc7dd820"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7eec70_pos" unit="mm" x="12.9477256956366" y="15.2432411025527" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7eec70_rot" unit="deg" x="25.73734245498" y="-20.2466022164788" z="-4.67159167340771"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7ff550">
+      <first ref="solidFinalDrilledAl0x55f6bc7eec70"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7ff550_pos" unit="mm" x="9.3681688139958" y="17.6702408889205" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7ff550_rot" unit="deg" x="30.9767627973802" y="-15.2628140726862" z="-4.2526559875598"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7dca40">
+      <first ref="solidFinalDrilledAl0x55f6bc7ff550"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7dca40_pos" unit="mm" x="5.35056677058441" y="19.2709998503845" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7dca40_rot" unit="deg" x="34.4363365777252" y="-8.92302553305451" z="-2.77030140908467"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc74e030">
+      <first ref="solidFinalDrilledAl0x55f6bc7dca40"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc74e030_pos" unit="mm" x="1.08277817170835" y="19.9706682770225" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc74e030_rot" unit="deg" x="35.9372997489523" y="-1.82258084075792" z="-0.59113468198452"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc8082d0">
+      <first ref="solidFinalDrilledAl0x55f6bc74e030"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc8082d0_pos" unit="mm" x="-3.23563993105529" y="19.7365304508305" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc8082d0_rot" unit="deg" x="35.4361136385756" y="5.4297957812327" z="1.73592123581767"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7f49b0">
+      <first ref="solidFinalDrilledAl0x55f6bc8082d0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7f49b0_pos" unit="mm" x="-7.40276310679828" y="18.5795343963358" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7f49b0_rot" unit="deg" x="32.9449478019855" y="12.2260085136059" z="3.62768819832524"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7f6560">
+      <first ref="solidFinalDrilledAl0x55f6bc7f49b0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7f6560_pos" unit="mm" x="-11.2237413072476" y="16.5537799631378" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7f6560_rot" unit="deg" x="28.5591723078394" y="17.9594206735439" z="4.60629937251702"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7f7d00">
+      <first ref="solidFinalDrilledAl0x55f6bc7f6560"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7f7d00_pos" unit="mm" x="-14.5199098384626" y="13.7539891770685" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7f7d00_rot" unit="deg" x="22.5784637613409" y="22.0641530744538" z="4.45754180602373"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7f76b0">
+      <first ref="solidFinalDrilledAl0x55f6bc7f7d00"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7f76b0_pos" unit="mm" x="-17.1371435233518" y="10.3110771435404" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7f76b0_rot" unit="deg" x="15.6326317986697" y="24.1256913575104" z="3.36066019887893"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7f8bf0">
+      <first ref="solidFinalDrilledAl0x55f6bc7f76b0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7f8bf0_pos" unit="mm" x="-18.953063423656" y="6.3860306027196" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7f8bf0_rot" unit="deg" x="8.64008512218189" y="24.0300858769973" z="1.84221174802243"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7f40b0">
+      <first ref="solidFinalDrilledAl0x55f6bc7f8bf0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7f40b0_pos" unit="mm" x="-19.8827591430872" y="2.16238036847884" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7f40b0_rot" unit="deg" x="2.52335737608343" y="22.0390102712864" z="0.491458952518845"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7f2be0">
+      <first ref="solidFinalDrilledAl0x55f6bc7f40b0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7f2be0_pos" unit="mm" x="-19.8827591430872" y="-2.16238036847882" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7f2be0_rot" unit="deg" x="-2.11082872223401" y="18.7096964985434" z="-0.347774899251152"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7fcf10">
+      <first ref="solidFinalDrilledAl0x55f6bc7f2be0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7fcf10_pos" unit="mm" x="-18.953063423656" y="-6.3860306027196" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7fcf10_rot" unit="deg" x="-5.07769608606397" y="14.7178496743352" z="-0.656198702496396"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc818440">
+      <first ref="solidFinalDrilledAl0x55f6bc7fcf10"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc818440_pos" unit="mm" x="-17.1371435233518" y="-10.3110771435404" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc818440_rot" unit="deg" x="-6.52511748643032" y="10.6954160374693" z="-0.611452457676282"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc818ee0">
+      <first ref="solidFinalDrilledAl0x55f6bc818440"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc818ee0_pos" unit="mm" x="-14.5199098384626" y="-13.7539891770685" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc818ee0_rot" unit="deg" x="-6.80260828738144" y="7.12757019131538" z="-0.424163712912959"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc819ba0">
+      <first ref="solidFinalDrilledAl0x55f6bc818ee0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc819ba0_pos" unit="mm" x="-11.2237413072476" y="-16.5537799631378" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc819ba0_rot" unit="deg" x="-6.36099780524939" y="4.29594089534026" z="-0.23882523152532"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc8097f0">
+      <first ref="solidFinalDrilledAl0x55f6bc819ba0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc8097f0_pos" unit="mm" x="-7.40276310679829" y="-18.5795343963358" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc8097f0_rot" unit="deg" x="-5.67048830552097" y="2.25447833141717" z="-0.111666906814346"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc809c80">
+      <first ref="solidFinalDrilledAl0x55f6bc8097f0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc809c80_pos" unit="mm" x="-3.2356399310553" y="-19.7365304508305" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc809c80_rot" unit="deg" x="-5.13600072634547" y="0.840817035667037" z="-0.0377114016587863"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc80cb80">
+      <first ref="solidFinalDrilledAl0x55f6bc809c80"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc80cb80_pos" unit="mm" x="1.08277817170833" y="-19.9706682770225" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc80cb80_rot" unit="deg" x="-5.01540341475561" y="-0.271578100340229" z="0.0118939535339677"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc80d250">
+      <first ref="solidFinalDrilledAl0x55f6bc80cb80"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc80d250_pos" unit="mm" x="5.3505667705844" y="-19.2709998503845" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc80d250_rot" unit="deg" x="-5.36333674811158" y="-1.48661565362419" z="0.069634223407236"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc7ffff0">
+      <first ref="solidFinalDrilledAl0x55f6bc80d250"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc7ffff0_pos" unit="mm" x="9.36816881399581" y="-17.6702408889205" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc7ffff0_rot" unit="deg" x="-6.0189953688742" y="-3.18192808071328" z="0.167329582004694"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc800a70">
+      <first ref="solidFinalDrilledAl0x55f6bc7ffff0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc800a70_pos" unit="mm" x="12.9477256956366" y="-15.2432411025527" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc800a70_rot" unit="deg" x="-6.64179540244681" y="-5.61095945406492" z="0.325838809548225"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc828b40">
+      <first ref="solidFinalDrilledAl0x55f6bc800a70"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc828b40_pos" unit="mm" x="15.9218613141129" y="-12.1034843038753" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc828b40_rot" unit="deg" x="-6.78332701094464" y="-8.83186136259433" z="0.524454902022673"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc8270d0">
+      <first ref="solidFinalDrilledAl0x55f6bc828b40"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc8270d0_pos" unit="mm" x="18.1515083934191" y="-8.3977820312053" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc8270d0_rot" unit="deg" x="-5.97287753666205" y="-12.6758550749018" z="0.664008126614436"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledAl0x55f6bc802f70">
+      <first ref="solidFinalDrilledAl0x55f6bc8270d0"/>
+      <second ref="solidHoleLong0x55f6bc7d4870"/>
+      <position name="solidFinalDrilledAl0x55f6bc802f70_pos" unit="mm" x="19.5324111142017" y="-4.29940880422049" z="17.2"/>
+      <rotation name="solidFinalDrilledAl0x55f6bc802f70_rot" unit="deg" x="-3.7995906858842" y="-16.7545780740922" z="0.559736596418565"/>
+    </subtraction>
+    <box lunit="mm" name="solidDrilledVeto0x55f6bc7f1df0" x="72" y="72" z="8"/>
+    <tube aunit="deg" deltaphi="360" lunit="mm" name="solidHole0x55f6bc7dfff0" rmax="1" rmin="0" startphi="0" z="60"/>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7f1650">
+      <first ref="solidDrilledVeto0x55f6bc7f1df0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7f1650_pos" unit="mm" x="0" y="0" z="9.1"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7eb350">
+      <first ref="solidFinalDrilledVeto0x55f6bc7f1650"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7eb350_pos" unit="mm" x="20" y="0" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7eb350_rot" unit="deg" x="0" y="-20.5" z="0"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7efb90">
+      <first ref="solidFinalDrilledVeto0x55f6bc7eb350"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7efb90_pos" unit="mm" x="19.5324111142017" y="4.29940880422048" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7efb90_rot" unit="deg" x="5.42436522058808" y="-23.2416707506719" z="-1.11631671856981"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7fada0">
+      <first ref="solidFinalDrilledVeto0x55f6bc7efb90"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7fada0_pos" unit="mm" x="18.1515083934191" y="8.39778203120529" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7fada0_rot" unit="deg" x="12.080234970027" y="-24.3398083796434" z="-2.61443818700146"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7dd630">
+      <first ref="solidFinalDrilledVeto0x55f6bc7fada0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7dd630_pos" unit="mm" x="15.9218613141129" y="12.1034843038753" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7dd630_rot" unit="deg" x="19.1731962226245" y="-23.366056619094" z="-4.00044573570929"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7eea80">
+      <first ref="solidFinalDrilledVeto0x55f6bc7dd630"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7eea80_pos" unit="mm" x="12.9477256956366" y="15.2432411025527" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7eea80_rot" unit="deg" x="25.73734245498" y="-20.2466022164788" z="-4.67159167340771"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7ff360">
+      <first ref="solidFinalDrilledVeto0x55f6bc7eea80"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7ff360_pos" unit="mm" x="9.3681688139958" y="17.6702408889205" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7ff360_rot" unit="deg" x="30.9767627973802" y="-15.2628140726862" z="-4.2526559875598"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7dc850">
+      <first ref="solidFinalDrilledVeto0x55f6bc7ff360"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7dc850_pos" unit="mm" x="5.35056677058441" y="19.2709998503845" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7dc850_rot" unit="deg" x="34.4363365777252" y="-8.92302553305451" z="-2.77030140908467"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc74dea0">
+      <first ref="solidFinalDrilledVeto0x55f6bc7dc850"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc74dea0_pos" unit="mm" x="1.08277817170835" y="19.9706682770225" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc74dea0_rot" unit="deg" x="35.9372997489523" y="-1.82258084075792" z="-0.59113468198452"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc8080e0">
+      <first ref="solidFinalDrilledVeto0x55f6bc74dea0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc8080e0_pos" unit="mm" x="-3.23563993105529" y="19.7365304508305" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc8080e0_rot" unit="deg" x="35.4361136385756" y="5.4297957812327" z="1.73592123581767"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc806c30">
+      <first ref="solidFinalDrilledVeto0x55f6bc8080e0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc806c30_pos" unit="mm" x="-7.40276310679828" y="18.5795343963358" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc806c30_rot" unit="deg" x="32.9449478019855" y="12.2260085136059" z="3.62768819832524"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7f6370">
+      <first ref="solidFinalDrilledVeto0x55f6bc806c30"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7f6370_pos" unit="mm" x="-11.2237413072476" y="16.5537799631378" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7f6370_rot" unit="deg" x="28.5591723078394" y="17.9594206735439" z="4.60629937251702"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7f6f20">
+      <first ref="solidFinalDrilledVeto0x55f6bc7f6370"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7f6f20_pos" unit="mm" x="-14.5199098384626" y="13.7539891770685" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7f6f20_rot" unit="deg" x="22.5784637613409" y="22.0641530744538" z="4.45754180602373"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7f74c0">
+      <first ref="solidFinalDrilledVeto0x55f6bc7f6f20"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7f74c0_pos" unit="mm" x="-17.1371435233518" y="10.3110771435404" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7f74c0_rot" unit="deg" x="15.6326317986697" y="24.1256913575104" z="3.36066019887893"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7f8a60">
+      <first ref="solidFinalDrilledVeto0x55f6bc7f74c0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7f8a60_pos" unit="mm" x="-18.953063423656" y="6.3860306027196" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7f8a60_rot" unit="deg" x="8.64008512218189" y="24.0300858769973" z="1.84221174802243"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7f3ec0">
+      <first ref="solidFinalDrilledVeto0x55f6bc7f8a60"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7f3ec0_pos" unit="mm" x="-19.8827591430872" y="2.16238036847884" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7f3ec0_rot" unit="deg" x="2.52335737608343" y="22.0390102712864" z="0.491458952518845"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7f37a0">
+      <first ref="solidFinalDrilledVeto0x55f6bc7f3ec0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7f37a0_pos" unit="mm" x="-19.8827591430872" y="-2.16238036847882" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7f37a0_rot" unit="deg" x="-2.11082872223401" y="18.7096964985434" z="-0.347774899251152"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7fcd20">
+      <first ref="solidFinalDrilledVeto0x55f6bc7f37a0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7fcd20_pos" unit="mm" x="-18.953063423656" y="-6.3860306027196" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7fcd20_rot" unit="deg" x="-5.07769608606397" y="14.7178496743352" z="-0.656198702496396"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc818250">
+      <first ref="solidFinalDrilledVeto0x55f6bc7fcd20"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc818250_pos" unit="mm" x="-17.1371435233518" y="-10.3110771435404" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc818250_rot" unit="deg" x="-6.52511748643032" y="10.6954160374693" z="-0.611452457676282"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc818cf0">
+      <first ref="solidFinalDrilledVeto0x55f6bc818250"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc818cf0_pos" unit="mm" x="-14.5199098384626" y="-13.7539891770685" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc818cf0_rot" unit="deg" x="-6.80260828738144" y="7.12757019131538" z="-0.424163712912959"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc8199b0">
+      <first ref="solidFinalDrilledVeto0x55f6bc818cf0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc8199b0_pos" unit="mm" x="-11.2237413072476" y="-16.5537799631378" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc8199b0_rot" unit="deg" x="-6.36099780524939" y="4.29594089534026" z="-0.23882523152532"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc809600">
+      <first ref="solidFinalDrilledVeto0x55f6bc8199b0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc809600_pos" unit="mm" x="-7.40276310679829" y="-18.5795343963358" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc809600_rot" unit="deg" x="-5.67048830552097" y="2.25447833141717" z="-0.111666906814346"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc809af0">
+      <first ref="solidFinalDrilledVeto0x55f6bc809600"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc809af0_pos" unit="mm" x="-3.2356399310553" y="-19.7365304508305" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc809af0_rot" unit="deg" x="-5.13600072634547" y="0.840817035667037" z="-0.0377114016587863"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc80c990">
+      <first ref="solidFinalDrilledVeto0x55f6bc809af0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc80c990_pos" unit="mm" x="1.08277817170833" y="-19.9706682770225" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc80c990_rot" unit="deg" x="-5.01540341475561" y="-0.271578100340229" z="0.0118939535339677"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc80d060">
+      <first ref="solidFinalDrilledVeto0x55f6bc80c990"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc80d060_pos" unit="mm" x="5.3505667705844" y="-19.2709998503845" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc80d060_rot" unit="deg" x="-5.36333674811158" y="-1.48661565362419" z="0.069634223407236"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc7ffe00">
+      <first ref="solidFinalDrilledVeto0x55f6bc80d060"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc7ffe00_pos" unit="mm" x="9.36816881399581" y="-17.6702408889205" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc7ffe00_rot" unit="deg" x="-6.0189953688742" y="-3.18192808071328" z="0.167329582004694"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc8008e0">
+      <first ref="solidFinalDrilledVeto0x55f6bc7ffe00"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc8008e0_pos" unit="mm" x="12.9477256956366" y="-15.2432411025527" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc8008e0_rot" unit="deg" x="-6.64179540244681" y="-5.61095945406492" z="0.325838809548225"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc828950">
+      <first ref="solidFinalDrilledVeto0x55f6bc8008e0"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc828950_pos" unit="mm" x="15.9218613141129" y="-12.1034843038753" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc828950_rot" unit="deg" x="-6.78332701094464" y="-8.83186136259433" z="0.524454902022673"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc826f40">
+      <first ref="solidFinalDrilledVeto0x55f6bc828950"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc826f40_pos" unit="mm" x="18.1515083934191" y="-8.3977820312053" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc826f40_rot" unit="deg" x="-5.97287753666205" y="-12.6758550749018" z="0.664008126614436"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55f6bc802290">
+      <first ref="solidFinalDrilledVeto0x55f6bc826f40"/>
+      <second ref="solidHole0x55f6bc7dfff0"/>
+      <position name="solidFinalDrilledVeto0x55f6bc802290_pos" unit="mm" x="19.5324111142017" y="-4.29940880422049" z="9.1"/>
+      <rotation name="solidFinalDrilledVeto0x55f6bc802290_rot" unit="deg" x="-3.7995906858842" y="-16.7545780740922" z="0.559736596418565"/>
+    </subtraction>
+    <box lunit="mm" name="solidPCBThin0x55f6bc7d9770" x="60" y="60" z="2"/>
+    <tube aunit="deg" deltaphi="360" lunit="mm" name="solidHolePCB0x55f6bc7d87b0" rmax="1.3" rmin="0" startphi="0" z="20"/>
+    <subtraction name="solidPCBThinFinal0x55f6bc7f10b0">
+      <first ref="solidPCBThin0x55f6bc7d9770"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7ee4e0">
+      <first ref="solidPCBThinFinal0x55f6bc7f10b0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7ee4e0_pos" unit="mm" x="20" y="0" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7ef8f0">
+      <first ref="solidPCBThinFinal0x55f6bc7ee4e0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7ef8f0_pos" unit="mm" x="19.5324111142017" y="4.29940880422048" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7fac10">
+      <first ref="solidPCBThinFinal0x55f6bc7ef8f0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7fac10_pos" unit="mm" x="18.1515083934191" y="8.39778203120529" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7fd4d0">
+      <first ref="solidPCBThinFinal0x55f6bc7fac10"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7fd4d0_pos" unit="mm" x="15.9218613141129" y="12.1034843038753" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7fe650">
+      <first ref="solidPCBThinFinal0x55f6bc7fd4d0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7fe650_pos" unit="mm" x="12.9477256956366" y="15.2432411025527" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7ff0c0">
+      <first ref="solidPCBThinFinal0x55f6bc7fe650"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7ff0c0_pos" unit="mm" x="9.3681688139958" y="17.6702408889205" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7dc5b0">
+      <first ref="solidPCBThinFinal0x55f6bc7ff0c0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7dc5b0_pos" unit="mm" x="5.35056677058441" y="19.2709998503845" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7dd0a0">
+      <first ref="solidPCBThinFinal0x55f6bc7dc5b0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7dd0a0_pos" unit="mm" x="1.08277817170835" y="19.9706682770225" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc807dd0">
+      <first ref="solidPCBThinFinal0x55f6bc7dd0a0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc807dd0_pos" unit="mm" x="-3.23563993105529" y="19.7365304508305" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc8075b0">
+      <first ref="solidPCBThinFinal0x55f6bc807dd0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc8075b0_pos" unit="mm" x="-7.40276310679828" y="18.5795343963358" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7f7280">
+      <first ref="solidPCBThinFinal0x55f6bc8075b0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7f7280_pos" unit="mm" x="-11.2237413072476" y="16.5537799631378" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7f52e0">
+      <first ref="solidPCBThinFinal0x55f6bc7f7280"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7f52e0_pos" unit="mm" x="-14.5199098384626" y="13.7539891770685" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7f9dd0">
+      <first ref="solidPCBThinFinal0x55f6bc7f52e0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7f9dd0_pos" unit="mm" x="-17.1371435233518" y="10.3110771435404" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7f9880">
+      <first ref="solidPCBThinFinal0x55f6bc7f9dd0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7f9880_pos" unit="mm" x="-18.953063423656" y="6.3860306027196" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7f46a0">
+      <first ref="solidPCBThinFinal0x55f6bc7f9880"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7f46a0_pos" unit="mm" x="-19.8827591430872" y="2.16238036847884" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc80ec20">
+      <first ref="solidPCBThinFinal0x55f6bc7f46a0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc80ec20_pos" unit="mm" x="-19.8827591430872" y="-2.16238036847882" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc817720">
+      <first ref="solidPCBThinFinal0x55f6bc80ec20"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc817720_pos" unit="mm" x="-18.953063423656" y="-6.3860306027196" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc7fb9e0">
+      <first ref="solidPCBThinFinal0x55f6bc817720"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc7fb9e0_pos" unit="mm" x="-17.1371435233518" y="-10.3110771435404" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc81a690">
+      <first ref="solidPCBThinFinal0x55f6bc7fb9e0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc81a690_pos" unit="mm" x="-14.5199098384626" y="-13.7539891770685" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc81a3d0">
+      <first ref="solidPCBThinFinal0x55f6bc81a690"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc81a3d0_pos" unit="mm" x="-11.2237413072476" y="-16.5537799631378" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc80aca0">
+      <first ref="solidPCBThinFinal0x55f6bc81a3d0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc80aca0_pos" unit="mm" x="-7.40276310679829" y="-18.5795343963358" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc80c070">
+      <first ref="solidPCBThinFinal0x55f6bc80aca0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc80c070_pos" unit="mm" x="-3.2356399310553" y="-19.7365304508305" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc806820">
+      <first ref="solidPCBThinFinal0x55f6bc80c070"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc806820_pos" unit="mm" x="1.08277817170833" y="-19.9706682770225" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc80df00">
+      <first ref="solidPCBThinFinal0x55f6bc806820"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc80df00_pos" unit="mm" x="5.3505667705844" y="-19.2709998503845" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc801140">
+      <first ref="solidPCBThinFinal0x55f6bc80df00"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc801140_pos" unit="mm" x="9.36816881399581" y="-17.6702408889205" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc826a00">
+      <first ref="solidPCBThinFinal0x55f6bc801140"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc826a00_pos" unit="mm" x="12.9477256956366" y="-15.2432411025527" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc8255d0">
+      <first ref="solidPCBThinFinal0x55f6bc826a00"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc8255d0_pos" unit="mm" x="15.9218613141129" y="-12.1034843038753" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc827b80">
+      <first ref="solidPCBThinFinal0x55f6bc8255d0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc827b80_pos" unit="mm" x="18.1515083934191" y="-8.3977820312053" z="0"/>
+    </subtraction>
+    <subtraction name="solidPCBThinFinal0x55f6bc802c10">
+      <first ref="solidPCBThinFinal0x55f6bc827b80"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThinFinal0x55f6bc802c10_pos" unit="mm" x="19.5324111142017" y="-4.29940880422049" z="0"/>
+    </subtraction>
+    <box lunit="mm" name="solidPCBThick0x55f6bc7d9850" x="60" y="60" z="2"/>
+    <subtraction name="solidPCBThickFinal0x55f6bc7f13a0">
+      <first ref="solidPCBThick0x55f6bc7d9850"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7f13a0_pos" unit="mm" x="0" y="0" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7ee1c0">
+      <first ref="solidPCBThickFinal0x55f6bc7f13a0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7ee1c0_pos" unit="mm" x="17.7193034551427" y="0" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7ef9a0">
+      <first ref="solidPCBThickFinal0x55f6bc7ee1c0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7ef9a0_pos" unit="mm" x="16.9009104395758" y="3.72017170427164" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7fb390">
+      <first ref="solidPCBThickFinal0x55f6bc7ef9a0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7fb390_pos" unit="mm" x="15.3296605059273" y="7.09225617788474" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7de370">
+      <first ref="solidPCBThickFinal0x55f6bc7fb390"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7de370_pos" unit="mm" x="13.1316736199069" y="9.98243876180954" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7fe520">
+      <first ref="solidPCBThickFinal0x55f6bc7de370"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7fe520_pos" unit="mm" x="10.4499322407304" y="12.3026113153196" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7ff170">
+      <first ref="solidPCBThickFinal0x55f6bc7fe520"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7ff170_pos" unit="mm" x="7.42676107053085" y="14.0083574224963" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7dc660">
+      <first ref="solidPCBThickFinal0x55f6bc7ff170"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7dc660_pos" unit="mm" x="4.18931748317365" y="15.0885579141431" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc74edb0">
+      <first ref="solidPCBThickFinal0x55f6bc7dc660"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc74edb0_pos" unit="mm" x="0.843039564256294" y="15.5489498422423" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc807ef0">
+      <first ref="solidPCBThickFinal0x55f6bc74edb0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc807ef0_pos" unit="mm" x="-2.52399638450247" y="15.3956968519276" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc807440">
+      <first ref="solidPCBThickFinal0x55f6bc807ef0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc807440_pos" unit="mm" x="-5.82772062085092" y="14.6264758395281" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc74e840">
+      <first ref="solidPCBThickFinal0x55f6bc807440"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc74e840_pos" unit="mm" x="-8.97259573910749" y="13.2335886490417" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7f5720">
+      <first ref="solidPCBThickFinal0x55f6bc74e840"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7f5720_pos" unit="mm" x="-11.8421644100098" y="11.2174939748514" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7f7330">
+      <first ref="solidPCBThickFinal0x55f6bc7f5720"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7f7330_pos" unit="mm" x="-14.3002600135782" y="8.60418096935281" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc80f330">
+      <first ref="solidPCBThickFinal0x55f6bc7f7330"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc80f330_pos" unit="mm" x="-16.2021103735221" y="5.45912659928165" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7f3d30">
+      <first ref="solidPCBThickFinal0x55f6bc80f330"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7f3d30_pos" unit="mm" x="-17.4109698874152" y="1.89355708680968" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7f3570">
+      <first ref="solidPCBThickFinal0x55f6bc7f3d30"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7f3570_pos" unit="mm" x="-17.8154696183533" y="-1.93754908364175" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc7fcb90">
+      <first ref="solidPCBThickFinal0x55f6bc7f3570"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc7fcb90_pos" unit="mm" x="-17.3444140630592" y="-5.84401352525892" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc8180c0">
+      <first ref="solidPCBThickFinal0x55f6bc7fcb90"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc8180c0_pos" unit="mm" x="-15.9775301861564" y="-9.61336094829428" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc818b60">
+      <first ref="solidPCBThickFinal0x55f6bc8180c0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc818b60_pos" unit="mm" x="-13.7517257674951" y="-13.0263265734002" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc8196c0">
+      <first ref="solidPCBThickFinal0x55f6bc818b60"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc8196c0_pos" unit="mm" x="-10.7626760802347" y="-15.8737596287688" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc809470">
+      <first ref="solidPCBThickFinal0x55f6bc8196c0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc809470_pos" unit="mm" x="-7.16143501458814" y="-17.973846557169" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc80c4b0">
+      <first ref="solidPCBThickFinal0x55f6bc809470"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc80c4b0_pos" unit="mm" x="-3.14575496087143" y="-19.1882563879229" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc80c800">
+      <first ref="solidPCBThickFinal0x55f6bc80c4b0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc80c800_pos" unit="mm" x="1.05375324005156" y="-19.4353349123259" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc801a00">
+      <first ref="solidPCBThickFinal0x55f6bc80c800"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc801a00_pos" unit="mm" x="5.19156245895396" y="-18.6983180772149" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc801580">
+      <first ref="solidPCBThickFinal0x55f6bc801a00"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc801580_pos" unit="mm" x="9.02717604605783" y="-17.0270602982972" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc800750">
+      <first ref="solidPCBThickFinal0x55f6bc801580"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc800750_pos" unit="mm" x="12.344388223459" y="-14.5329373186452" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc828760">
+      <first ref="solidPCBThickFinal0x55f6bc800750"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc828760_pos" unit="mm" x="14.9673762347468" y="-11.3779036102318" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc826db0">
+      <first ref="solidPCBThickFinal0x55f6bc828760"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc826db0_pos" unit="mm" x="16.7720260662712" y="-7.75956554537933" z="6.1"/>
+    </subtraction>
+    <subtraction name="solidPCBThickFinal0x55f6bc802100">
+      <first ref="solidPCBThickFinal0x55f6bc826db0"/>
+      <second ref="solidHolePCB0x55f6bc7d87b0"/>
+      <position name="solidPCBThickFinal0x55f6bc802100_pos" unit="mm" x="17.6919424709602" y="-3.89429102114807" z="6.1"/>
+    </subtraction>
+    <box lunit="mm" name="solidLateralVeto0x55f6bc7ee7c0" x="65" y="8" z="57"/>
+    <box lunit="mm" name="solidContainer0x55f6bc7e0920" x="2000" y="2000" z="2000"/>
+  </solids>
+
+  <structure>
+    <volume name="logicScintVeto0x55f6bc7e0520">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE0x55f6bc019b80"/>
+      <solidref ref="solidScintVeto0x55f6bc7d7340"/>
+    </volume>
+    <volume name="logicSiDetThin0x55f6bc7f0a70">
+      <materialref ref="Si0x55f6bc0123d0"/>
+      <solidref ref="solidSiDetThin0x55f6bc7f1ef0"/>
+    </volume>
+    <volume name="logicSiDetThick0x55f6bc7f0b80">
+      <materialref ref="Si0x55f6bc0123d0"/>
+      <solidref ref="solidSiDetThick0x55f6bc7e0a50"/>
+    </volume>
+    <volume name="logicHoleVisualization0x55f6bc7d95c0">
+      <materialref ref="G4_Galactic0x55f6bc020040"/>
+      <solidref ref="solidHoleVisualization0x55f6bc7d6aa0"/>
+    </volume>
+    <volume name="logicDrilledAl0x55f6bc8058b0">
+      <materialref ref="G4_Al0x55f6bc0207b0"/>
+      <solidref ref="solidFinalDrilledAl0x55f6bc802f70"/>
+    </volume>
+    <volume name="logicDrilledVeto0x55f6bc8053b0">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE0x55f6bc019b80"/>
+      <solidref ref="solidFinalDrilledVeto0x55f6bc802290"/>
+    </volume>
+    <volume name="logicPCBThin0x55f6bc8059c0">
+      <materialref ref="G4_BAKELITE0x55f6bc020ed0"/>
+      <solidref ref="solidPCBThinFinal0x55f6bc802c10"/>
+    </volume>
+    <volume name="logicPCBThick0x55f6bc805ad0">
+      <materialref ref="G4_BAKELITE0x55f6bc020ed0"/>
+      <solidref ref="solidPCBThickFinal0x55f6bc802100"/>
+    </volume>
+    <volume name="logicLateralVeto0x55f6bc804450">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE0x55f6bc019b80"/>
+      <solidref ref="solidLateralVeto0x55f6bc7ee7c0"/>
+    </volume>
+    <volume name="logicContainer0x55f6bc7e0410">
+      <materialref ref="G4_Galactic0x55f6bc020040"/>
+      <solidref ref="solidContainer0x55f6bc7e0920"/>
+      <physvol name="physScintVeto0x55f6bc7dee80">
+        <volumeref ref="logicScintVeto0x55f6bc7e0520"/>
+        <position name="physScintVeto0x55f6bc7dee80_pos" unit="mm" x="0" y="0" z="13.2"/>
+      </physvol>
+      <physvol copynumber="1" name="physScintVeto0x55f6bc7df080">
+        <volumeref ref="logicScintVeto0x55f6bc7e0520"/>
+        <position name="physScintVeto0x55f6bc7df080_pos" unit="mm" x="0" y="0" z="21.4"/>
+      </physvol>
+      <physvol copynumber="2" name="physScintVeto0x55f6bc7dfce0">
+        <volumeref ref="logicScintVeto0x55f6bc7e0520"/>
+        <position name="physScintVeto0x55f6bc7dfce0_pos" unit="mm" x="0" y="0" z="29.6"/>
+      </physvol>
+      <physvol copynumber="3" name="physScintVeto0x55f6bc7f1bf0">
+        <volumeref ref="logicScintVeto0x55f6bc7e0520"/>
+        <position name="physScintVeto0x55f6bc7f1bf0_pos" unit="mm" x="0" y="0" z="37.8"/>
+      </physvol>
+      <physvol copynumber="4" name="physScintVeto0x55f6bc7df650">
+        <volumeref ref="logicScintVeto0x55f6bc7e0520"/>
+        <position name="physScintVeto0x55f6bc7df650_pos" unit="mm" x="0" y="0" z="46"/>
+      </physvol>
+      <physvol name="physSiDetThin0x55f6bc7eadc0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+      </physvol>
+      <physvol name="physSiDetThick0x55f6bc7eafd0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7eafd0_pos" unit="mm" x="0" y="0" z="6.1"/>
+      </physvol>
+      <physvol name="physHoleVisualization0x55f6bc7ed460">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7ed460_pos" unit="mm" x="0" y="0" z="-110"/>
+      </physvol>
+      <physvol copynumber="1" name="physSiDetThin0x55f6bc7eb730">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7eb730_pos" unit="mm" x="20" y="0" z="0"/>
+      </physvol>
+      <physvol copynumber="1" name="physSiDetThick0x55f6bc7eb8e0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7eb8e0_pos" unit="mm" x="17.7193034551427" y="0" z="6.1"/>
+      </physvol>
+      <physvol copynumber="1" name="physHoleVisualization0x55f6bc7ec620">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7ec620_pos" unit="mm" x="58.5228119385414" y="0" z="-103.033940817324"/>
+        <rotation name="physHoleVisualization0x55f6bc7ec620_rot" unit="deg" x="0" y="20.5" z="0"/>
+      </physvol>
+      <physvol copynumber="2" name="physSiDetThin0x55f6bc7d4d80">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7d4d80_pos" unit="mm" x="19.5324111142017" y="4.29940880422048" z="0"/>
+      </physvol>
+      <physvol copynumber="2" name="physSiDetThick0x55f6bc7ebb70">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7ebb70_pos" unit="mm" x="16.9009104395758" y="3.72017170427164" z="6.1"/>
+      </physvol>
+      <physvol copynumber="2" name="physHoleVisualization0x55f6bc7ebdb0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7ebdb0_pos" unit="mm" x="62.9395424575827" y="13.8540409268259" z="-100.620723280744"/>
+        <rotation name="physHoleVisualization0x55f6bc7ebdb0_rot" unit="deg" x="-5.42436522058808" y="23.2416707506719" z="-1.11631671856981"/>
+      </physvol>
+      <physvol copynumber="3" name="physSiDetThin0x55f6bc7fb110">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7fb110_pos" unit="mm" x="18.1515083934191" y="8.39778203120529" z="0"/>
+      </physvol>
+      <physvol copynumber="3" name="physSiDetThick0x55f6bc7f00b0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7f00b0_pos" unit="mm" x="15.3296605059273" y="7.09225617788474" z="6.1"/>
+      </physvol>
+      <physvol copynumber="3" name="physHoleVisualization0x55f6bc7f0860">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7f0860_pos" unit="mm" x="63.4877323644845" y="29.3725527651319" z="-98.003498859503"/>
+        <rotation name="physHoleVisualization0x55f6bc7f0860_rot" unit="deg" x="-12.080234970027" y="24.3398083796434" z="-2.61443818700146"/>
+      </physvol>
+      <physvol copynumber="4" name="physSiDetThin0x55f6bc7dda10">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7dda10_pos" unit="mm" x="15.9218613141129" y="12.1034843038753" z="0"/>
+      </physvol>
+      <physvol copynumber="4" name="physSiDetThick0x55f6bc7ddbc0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7ddbc0_pos" unit="mm" x="13.1316736199069" y="9.98243876180954" z="6.1"/>
+      </physvol>
+      <physvol copynumber="4" name="physHoleVisualization0x55f6bc7fa9d0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7fa9d0_pos" unit="mm" x="59.5483146605674" y="45.2674519390237" z="-95.3775855172716"/>
+        <rotation name="physHoleVisualization0x55f6bc7fa9d0_rot" unit="deg" x="-19.1731962226245" y="23.366056619094" z="-4.00044573570929"/>
+      </physvol>
+      <physvol copynumber="5" name="physSiDetThin0x55f6bc7fd580">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7fd580_pos" unit="mm" x="12.9477256956366" y="15.2432411025527" z="0"/>
+      </physvol>
+      <physvol copynumber="5" name="physSiDetThick0x55f6bc7fd730">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7fd730_pos" unit="mm" x="10.4499322407304" y="12.3026113153196" z="6.1"/>
+      </physvol>
+      <physvol copynumber="5" name="physHoleVisualization0x55f6bc7fd9c0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7fd9c0_pos" unit="mm" x="51.0144818261278" y="60.0588909957773" z="-92.9649374890858"/>
+        <rotation name="physHoleVisualization0x55f6bc7fd9c0_rot" unit="deg" x="-25.73734245498" y="20.2466022164788" z="-4.67159167340771"/>
+      </physvol>
+      <physvol copynumber="6" name="physSiDetThin0x55f6bc7ff740">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7ff740_pos" unit="mm" x="9.3681688139958" y="17.6702408889205" z="0"/>
+      </physvol>
+      <physvol copynumber="6" name="physSiDetThick0x55f6bc7fea00">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7fea00_pos" unit="mm" x="7.42676107053085" y="14.0083574224963" z="6.1"/>
+      </physvol>
+      <physvol copynumber="6" name="physHoleVisualization0x55f6bc7da2e0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7da2e0_pos" unit="mm" x="38.325336658088" y="72.289253571695" z="-90.9848662361383"/>
+        <rotation name="physHoleVisualization0x55f6bc7da2e0_rot" unit="deg" x="-30.9767627973802" y="15.2628140726862" z="-4.2526559875598"/>
+      </physvol>
+      <physvol copynumber="7" name="physSiDetThin0x55f6bc7dcb50">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7dcb50_pos" unit="mm" x="5.35056677058441" y="19.2709998503845" z="0"/>
+      </physvol>
+      <physvol copynumber="7" name="physSiDetThick0x55f6bc7feb70">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7feb70_pos" unit="mm" x="4.18931748317365" y="15.0885579141431" z="6.1"/>
+      </physvol>
+      <physvol copynumber="7" name="physHoleVisualization0x55f6bc7da9e0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7da9e0_pos" unit="mm" x="22.4123814937834" y="80.7221027103047" z="-89.6250882044237"/>
+        <rotation name="physHoleVisualization0x55f6bc7da9e0_rot" unit="deg" x="-34.4363365777252" y="8.92302553305451" z="-2.77030140908467"/>
+      </physvol>
+      <physvol copynumber="8" name="physSiDetThin0x55f6bc74e220">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc74e220_pos" unit="mm" x="1.08277817170835" y="19.9706682770225" z="0"/>
+      </physvol>
+      <physvol copynumber="8" name="physSiDetThick0x55f6bc74e3d0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc74e3d0_pos" unit="mm" x="0.843039564256294" y="15.5489498422423" z="6.1"/>
+      </physvol>
+      <physvol copynumber="8" name="physHoleVisualization0x55f6bc74e770">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc74e770_pos" unit="mm" x="4.5812921113015" y="84.4969610816883" z="-89.017514777155"/>
+        <rotation name="physHoleVisualization0x55f6bc74e770_rot" unit="deg" x="-35.9372997489523" y="1.82258084075792" z="-0.59113468198452"/>
+      </physvol>
+      <physvol copynumber="9" name="physSiDetThin0x55f6bc8062f0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc8062f0_pos" unit="mm" x="-3.23563993105529" y="19.7365304508305" z="0"/>
+      </physvol>
+      <physvol copynumber="9" name="physSiDetThick0x55f6bc8064a0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc8064a0_pos" unit="mm" x="-2.52399638450247" y="15.3956968519276" z="6.1"/>
+      </physvol>
+      <physvol copynumber="9" name="physHoleVisualization0x55f6bc807a50">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc807a50_pos" unit="mm" x="-13.6445029147291" y="83.2277858479655" z="-89.2217241454282"/>
+        <rotation name="physHoleVisualization0x55f6bc807a50_rot" unit="deg" x="-35.4361136385756" y="-5.4297957812327" z="1.73592123581767"/>
+      </physvol>
+      <physvol copynumber="10" name="physSiDetThin0x55f6bc7f4ba0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7f4ba0_pos" unit="mm" x="-7.40276310679828" y="18.5795343963358" z="0"/>
+      </physvol>
+      <physvol copynumber="10" name="physSiDetThick0x55f6bc7f4d50">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7f4d50_pos" unit="mm" x="-5.82772062085092" y="14.6264758395281" z="6.1"/>
+      </physvol>
+      <physvol copynumber="10" name="physHoleVisualization0x55f6bc807220">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc807220_pos" unit="mm" x="-30.6972933950426" y="77.0443968393149" z="-90.2176519211933"/>
+        <rotation name="physHoleVisualization0x55f6bc807220_rot" unit="deg" x="-32.9449478019855" y="-12.2260085136059" z="3.62768819832524"/>
+      </physvol>
+      <physvol copynumber="11" name="physSiDetThin0x55f6bc7f6750">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7f6750_pos" unit="mm" x="-11.2237413072476" y="16.5537799631378" z="0"/>
+      </physvol>
+      <physvol copynumber="11" name="physSiDetThick0x55f6bc7f5b30">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7f5b30_pos" unit="mm" x="-8.97259573910749" y="13.2335886490417" z="6.1"/>
+      </physvol>
+      <physvol copynumber="11" name="physHoleVisualization0x55f6bc7f5210">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7f5210_pos" unit="mm" x="-45.1415084813408" y="66.578743945363" z="-91.9080412613667"/>
+        <rotation name="physHoleVisualization0x55f6bc7f5210_rot" unit="deg" x="-28.5591723078394" y="-17.959420673544" z="4.60629937251702"/>
+      </physvol>
+      <physvol copynumber="12" name="physSiDetThin0x55f6bc7f7e90">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7f7e90_pos" unit="mm" x="-14.5199098384626" y="13.7539891770685" z="0"/>
+      </physvol>
+      <physvol copynumber="12" name="physSiDetThick0x55f6bc7f8040">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7f8040_pos" unit="mm" x="-11.8421644100098" y="11.2174939748514" z="6.1"/>
+      </physvol>
+      <physvol copynumber="12" name="physHoleVisualization0x55f6bc7f5c70">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7f5c70_pos" unit="mm" x="-55.8408059163396" y="52.8952210280003" z="-94.1304813358186"/>
+        <rotation name="physHoleVisualization0x55f6bc7f5c70_rot" unit="deg" x="-22.5784637613409" y="-22.0641530744538" z="4.45754180602373"/>
+      </physvol>
+      <physvol copynumber="13" name="physSiDetThin0x55f6bc7f78a0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7f78a0_pos" unit="mm" x="-17.1371435233518" y="10.3110771435404" z="0"/>
+      </physvol>
+      <physvol copynumber="13" name="physSiDetThick0x55f6bc7f7a50">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7f7a50_pos" unit="mm" x="-14.3002600135782" y="8.60418096935281" z="6.1"/>
+      </physvol>
+      <physvol copynumber="13" name="physHoleVisualization0x55f6bc7f8520">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7f8520_pos" unit="mm" x="-62.0985141585627" y="37.3634362760442" z="-96.6780482631359"/>
+        <rotation name="physHoleVisualization0x55f6bc7f8520_rot" unit="deg" x="-15.6326317986697" y="-24.1256913575104" z="3.36066019887893"/>
+      </physvol>
+      <physvol copynumber="14" name="physSiDetThin0x55f6bc7f8de0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7f8de0_pos" unit="mm" x="-18.953063423656" y="6.3860306027196" z="0"/>
+      </physvol>
+      <physvol copynumber="14" name="physSiDetThick0x55f6bc7f90b0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7f90b0_pos" unit="mm" x="-16.2021103735221" y="5.45912659928165" z="6.1"/>
+      </physvol>
+      <physvol copynumber="14" name="physHoleVisualization0x55f6bc80ef30">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc80ef30_pos" unit="mm" x="-63.7468550506069" y="21.4788162779112" z="-99.3263512480149"/>
+        <rotation name="physHoleVisualization0x55f6bc80ef30_rot" unit="deg" x="-8.64008512218189" y="-24.0300858769973" z="1.84221174802243"/>
+      </physvol>
+      <physvol copynumber="15" name="physSiDetThin0x55f6bc7f42a0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7f42a0_pos" unit="mm" x="-19.8827591430872" y="2.16238036847884" z="0"/>
+      </physvol>
+      <physvol copynumber="15" name="physSiDetThick0x55f6bc7f4350">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7f4350_pos" unit="mm" x="-17.4109698874152" y="1.89355708680968" z="6.1"/>
+      </physvol>
+      <physvol copynumber="15" name="physHoleVisualization0x55f6bc80e620">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc80e620_pos" unit="mm" x="-61.1589156893235" y="6.65143291694632" z="-101.863277524276"/>
+        <rotation name="physHoleVisualization0x55f6bc80e620_rot" unit="deg" x="-2.52335737608343" y="-22.0390102712864" z="0.491458952518845"/>
+      </physvol>
+      <physvol copynumber="16" name="physSiDetThin0x55f6bc7f2c90">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7f2c90_pos" unit="mm" x="-19.8827591430872" y="-2.16238036847882" z="0"/>
+      </physvol>
+      <physvol copynumber="16" name="physSiDetThick0x55f6bc7f4640">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7f4640_pos" unit="mm" x="-17.8154696183533" y="-1.93754908364175" z="6.1"/>
+      </physvol>
+      <physvol copynumber="16" name="physHoleVisualization0x55f6bc7f3b10">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7f3b10_pos" unit="mm" x="-55.1678208128444" y="-5.99986208347387" z="-104.116464389877"/>
+        <rotation name="physHoleVisualization0x55f6bc7f3b10_rot" unit="deg" x="2.11082872223401" y="-18.7096964985434" z="-0.347774899251152"/>
+      </physvol>
+      <physvol copynumber="17" name="physSiDetThin0x55f6bc7fc1f0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc7fc1f0_pos" unit="mm" x="-18.953063423656" y="-6.3860306027196" z="0"/>
+      </physvol>
+      <physvol copynumber="17" name="physSiDetThick0x55f6bc7fc3a0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7fc3a0_pos" unit="mm" x="-17.3444140630592" y="-5.84401352525892" z="6.1"/>
+      </physvol>
+      <physvol copynumber="17" name="physHoleVisualization0x55f6bc7d5db0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7d5db0_pos" unit="mm" x="-46.8995831889359" y="-15.8023094633619" z="-105.973231173856"/>
+        <rotation name="physHoleVisualization0x55f6bc7d5db0_rot" unit="deg" x="5.07769608606397" y="-14.7178496743352" z="-0.656198702496396"/>
+      </physvol>
+      <physvol copynumber="18" name="physSiDetThin0x55f6bc818630">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc818630_pos" unit="mm" x="-17.1371435233518" y="-10.3110771435404" z="0"/>
+      </physvol>
+      <physvol copynumber="18" name="physSiDetThick0x55f6bc7fb960">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc7fb960_pos" unit="mm" x="-15.9775301861564" y="-9.61336094829428" z="6.1"/>
+      </physvol>
+      <physvol copynumber="18" name="physHoleVisualization0x55f6bc7fb890">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7fb890_pos" unit="mm" x="-37.5518235915373" y="-22.594182595562" z="-107.388854906681"/>
+        <rotation name="physHoleVisualization0x55f6bc7fb890_rot" unit="deg" x="6.52511748643032" y="-10.6954160374693" z="-0.611452457676282"/>
+      </physvol>
+      <physvol copynumber="19" name="physSiDetThin0x55f6bc8190d0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc8190d0_pos" unit="mm" x="-14.5199098384626" y="-13.7539891770685" z="0"/>
+      </physvol>
+      <physvol copynumber="19" name="physSiDetThick0x55f6bc819280">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc819280_pos" unit="mm" x="-13.7517257674951" y="-13.0263265734002" z="6.1"/>
+      </physvol>
+      <physvol copynumber="19" name="physHoleVisualization0x55f6bc81a520">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc81a520_pos" unit="mm" x="-28.1685957934098" y="-26.6827112555126" z="-108.381555244062"/>
+        <rotation name="physHoleVisualization0x55f6bc81a520_rot" unit="deg" x="6.80260828738144" y="-7.12757019131538" z="-0.424163712912959"/>
+      </physvol>
+      <physvol copynumber="20" name="physSiDetThin0x55f6bc808680">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc808680_pos" unit="mm" x="-11.2237413072476" y="-16.5537799631378" z="0"/>
+      </physvol>
+      <physvol copynumber="20" name="physSiDetThick0x55f6bc817cc0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc817cc0_pos" unit="mm" x="-10.7626760802347" y="-15.8737596287688" z="6.1"/>
+      </physvol>
+      <physvol copynumber="20" name="physHoleVisualization0x55f6bc80a7e0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc80a7e0_pos" unit="mm" x="-19.4636302519768" y="-28.7067069397831" z="-109.015643813532"/>
+        <rotation name="physHoleVisualization0x55f6bc80a7e0_rot" unit="deg" x="6.36099780524939" y="-4.29594089534026" z="-0.23882523152532"/>
+      </physvol>
+      <physvol copynumber="21" name="physSiDetThin0x55f6bc808b40">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc808b40_pos" unit="mm" x="-7.40276310679829" y="-18.5795343963358" z="0"/>
+      </physvol>
+      <physvol copynumber="21" name="physSiDetThick0x55f6bc808cf0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc808cf0_pos" unit="mm" x="-7.16143501458814" y="-17.973846557169" z="6.1"/>
+      </physvol>
+      <physvol copynumber="21" name="physHoleVisualization0x55f6bc7ecef0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc7ecef0_pos" unit="mm" x="-11.7299339776241" y="-29.439914348181" z="-109.376998219718"/>
+        <rotation name="physHoleVisualization0x55f6bc7ecef0_rot" unit="deg" x="5.67048830552097" y="-2.25447833141717" z="-0.111666906814346"/>
+      </physvol>
+      <physvol copynumber="22" name="physSiDetThin0x55f6bc80bac0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc80bac0_pos" unit="mm" x="-3.2356399310553" y="-19.7365304508305" z="0"/>
+      </physvol>
+      <physvol copynumber="22" name="physSiDetThick0x55f6bc80bf00">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc80bf00_pos" unit="mm" x="-3.14575496087143" y="-19.1882563879229" z="6.1"/>
+      </physvol>
+      <physvol copynumber="22" name="physHoleVisualization0x55f6bc80e2b0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc80e2b0_pos" unit="mm" x="-4.84983481645607" y="-29.5826836656898" z="-109.546554677641"/>
+        <rotation name="physHoleVisualization0x55f6bc80e2b0_rot" unit="deg" x="5.13600072634547" y="-0.840817035667037" z="-0.0377114016587863"/>
+      </physvol>
+      <physvol copynumber="23" name="physSiDetThin0x55f6bc80cd70">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc80cd70_pos" unit="mm" x="1.08277817170833" y="-19.9706682770225" z="0"/>
+      </physvol>
+      <physvol copynumber="23" name="physSiDetThick0x55f6bc80cf20">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc80cf20_pos" unit="mm" x="1.05375324005156" y="-19.4353349123259" z="6.1"/>
+      </physvol>
+      <physvol copynumber="23" name="physHoleVisualization0x55f6bc80daf0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc80daf0_pos" unit="mm" x="1.60416874235742" y="-29.587151506244" z="-109.57760447361"/>
+        <rotation name="physHoleVisualization0x55f6bc80daf0_rot" unit="deg" x="5.01540341475561" y="0.271578100340229" z="0.0118939535339677"/>
+      </physvol>
+      <physvol copynumber="24" name="physSiDetThin0x55f6bc80d440">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc80d440_pos" unit="mm" x="5.3505667705844" y="-19.2709998503845" z="0"/>
+      </physvol>
+      <physvol copynumber="24" name="physSiDetThick0x55f6bc801760">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc801760_pos" unit="mm" x="5.19156245895396" y="-18.6983180772149" z="6.1"/>
+      </physvol>
+      <physvol copynumber="24" name="physHoleVisualization0x55f6bc80d5f0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc80d5f0_pos" unit="mm" x="8.20434371115722" y="-29.5493754604514" z="-109.481555304955"/>
+        <rotation name="physHoleVisualization0x55f6bc80d5f0_rot" unit="deg" x="5.36333674811158" y="1.48661565362419" z="0.069634223407236"/>
+      </physvol>
+      <physvol copynumber="25" name="physSiDetThin0x55f6bc8001e0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc8001e0_pos" unit="mm" x="9.36816881399581" y="-17.6702408889205" z="0"/>
+      </physvol>
+      <physvol copynumber="25" name="physSiDetThick0x55f6bc800390">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc800390_pos" unit="mm" x="9.02717604605783" y="-17.0270602982972" z="6.1"/>
+      </physvol>
+      <physvol copynumber="25" name="physHoleVisualization0x55f6bc826530">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc826530_pos" unit="mm" x="15.4738925626826" y="-29.1868575919963" z="-109.224940728843"/>
+        <rotation name="physHoleVisualization0x55f6bc826530_rot" unit="deg" x="6.0189953688742" y="3.18192808071328" z="0.167329582004694"/>
+      </physvol>
+      <physvol copynumber="26" name="physSiDetThin0x55f6bc800c60">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc800c60_pos" unit="mm" x="12.9477256956366" y="-15.2432411025527" z="0"/>
+      </physvol>
+      <physvol copynumber="26" name="physSiDetThick0x55f6bc825080">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc825080_pos" unit="mm" x="12.344388223459" y="-14.5329373186452" z="6.1"/>
+      </physvol>
+      <physvol copynumber="26" name="physHoleVisualization0x55f6bc825310">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc825310_pos" unit="mm" x="23.7027846954248" y="-27.9050754091909" z="-108.738248366903"/>
+        <rotation name="physHoleVisualization0x55f6bc825310_rot" unit="deg" x="6.64179540244681" y="5.61095945406492" z="0.325838809548225"/>
+      </physvol>
+      <physvol copynumber="27" name="physSiDetThin0x55f6bc826b20">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc826b20_pos" unit="mm" x="15.9218613141129" y="-12.1034843038753" z="0"/>
+      </physvol>
+      <physvol copynumber="27" name="physSiDetThick0x55f6bc80d7a0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc80d7a0_pos" unit="mm" x="14.9673762347468" y="-11.3779036102318" z="6.1"/>
+      </physvol>
+      <physvol copynumber="27" name="physHoleVisualization0x55f6bc8282d0">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc8282d0_pos" unit="mm" x="32.8107500621222" y="-24.942083751431" z="-107.934868328463"/>
+        <rotation name="physHoleVisualization0x55f6bc8282d0_rot" unit="deg" x="6.78332701094464" y="8.83186136259433" z="0.524454902022673"/>
+      </physvol>
+      <physvol copynumber="28" name="physSiDetThin0x55f6bc8272c0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc8272c0_pos" unit="mm" x="18.1515083934191" y="-8.3977820312053" z="0"/>
+      </physvol>
+      <physvol copynumber="28" name="physSiDetThick0x55f6bc827470">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc827470_pos" unit="mm" x="16.7720260662712" y="-7.75956554537933" z="6.1"/>
+      </physvol>
+      <physvol copynumber="28" name="physHoleVisualization0x55f6bc827b20">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc827b20_pos" unit="mm" x="42.2893678922907" y="-19.5651450061122" z="-106.736374975916"/>
+        <rotation name="physHoleVisualization0x55f6bc827b20_rot" unit="deg" x="5.97287753666205" y="12.6758550749018" z="0.664008126614436"/>
+      </physvol>
+      <physvol copynumber="29" name="physSiDetThin0x55f6bc8030f0">
+        <volumeref ref="logicSiDetThin0x55f6bc7f0a70"/>
+        <position name="physSiDetThin0x55f6bc8030f0_pos" unit="mm" x="19.5324111142017" y="-4.29940880422049" z="0"/>
+      </physvol>
+      <physvol copynumber="29" name="physSiDetThick0x55f6bc8032a0">
+        <volumeref ref="logicSiDetThick0x55f6bc7f0b80"/>
+        <position name="physSiDetThick0x55f6bc8032a0_pos" unit="mm" x="17.6919424709602" y="-3.89429102114807" z="6.1"/>
+      </physvol>
+      <physvol copynumber="29" name="physHoleVisualization0x55f6bc806010">
+        <volumeref ref="logicHoleVisualization0x55f6bc7d95c0"/>
+        <position name="physHoleVisualization0x55f6bc806010_pos" unit="mm" x="51.2424168622182" y="-11.2793088840308" z="-105.098794143114"/>
+        <rotation name="physHoleVisualization0x55f6bc806010_rot" unit="deg" x="3.7995906858842" y="16.7545780740922" z="0.559736596418565"/>
+      </physvol>
+      <physvol name="physDrilledAl0x55f6bc805b80">
+        <volumeref ref="logicDrilledAl0x55f6bc8058b0"/>
+        <position name="physDrilledAl0x55f6bc805b80_pos" unit="mm" x="0" y="0" z="-17.2"/>
+      </physvol>
+      <physvol name="physDrilledVeto0x55f6bc805e40">
+        <volumeref ref="logicDrilledVeto0x55f6bc8053b0"/>
+        <position name="physDrilledVeto0x55f6bc805e40_pos" unit="mm" x="0" y="0" z="-9.1"/>
+      </physvol>
+      <physvol name="physPCBThin0x55f6bc8040f0">
+        <volumeref ref="logicPCBThin0x55f6bc8059c0"/>
+      </physvol>
+      <physvol name="physPCBThick0x55f6bc81e4c0">
+        <volumeref ref="logicPCBThick0x55f6bc805ad0"/>
+        <position name="physPCBThick0x55f6bc81e4c0_pos" unit="mm" x="0" y="0" z="6.1"/>
+      </physvol>
+      <physvol name="physLateralVeto0x55f6bc804500">
+        <volumeref ref="logicLateralVeto0x55f6bc804450"/>
+        <position name="physLateralVeto0x55f6bc804500_pos" unit="mm" x="0" y="37.5" z="25.5"/>
+      </physvol>
+      <physvol copynumber="1" name="physLateralVeto0x55f6bc81b5e0">
+        <volumeref ref="logicLateralVeto0x55f6bc804450"/>
+        <position name="physLateralVeto0x55f6bc81b5e0_pos" unit="mm" x="0" y="-37.5" z="25.5"/>
+      </physvol>
+      <physvol copynumber="2" name="physLateralVeto0x55f6bc8209b0">
+        <volumeref ref="logicLateralVeto0x55f6bc804450"/>
+        <position name="physLateralVeto0x55f6bc8209b0_pos" unit="mm" x="37.5" y="0" z="25.5"/>
+        <rotation name="physLateralVeto0x55f6bc8209b0_rot" unit="deg" x="0" y="0" z="90"/>
+      </physvol>
+      <physvol copynumber="3" name="physLateralVeto0x55f6bc838750">
+        <volumeref ref="logicLateralVeto0x55f6bc804450"/>
+        <position name="physLateralVeto0x55f6bc838750_pos" unit="mm" x="-37.5" y="0" z="25.5"/>
+        <rotation name="physLateralVeto0x55f6bc838750_rot" unit="deg" x="0" y="0" z="90"/>
+      </physvol>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="logicContainer0x55f6bc7e0410"/>
+  </setup>
+
+</gdml>

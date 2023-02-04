@@ -1,0 +1,70 @@
+# ---------------------------------------------------------------------------- #
+#                                SIMULATION RUN                                #
+# ---------------------------------------------------------------------------- #
+#
+# - No debugging mode (random)
+# - Isotropic flux generation from a surface
+# - Electrons protons alpha muons
+#
+# - energy spectrum flat
+#
+#
+
+/particleEnergyRandom/DebbuggingModeIsOn false
+
+/gps/verbose 0
+/gps/pos/type Plane
+/gps/pos/shape Square
+/gps/pos/centre 0 0 -2.4 cm
+/gps/pos/halfx 11.5 cm
+/gps/pos/halfy 11.5 cm
+/gps/ang/type iso
+/gps/ene/type Lin
+/gps/ene/gradient 0
+/gps/ene/intercept 1
+/gps/ang/maxtheta 90 deg
+/gps/ang/mintheta 0 deg
+
+ # ---------------------------------------------------------------------------- #
+ #                                   ELECTRONS                                  #
+ # ---------------------------------------------------------------------------- #
+
+/gps/particle e-
+/gps/ene/min 0.01 MeV
+/gps/ene/max 9 MeV
+
+/NameOfFile/NameOfFile 20_07_2022_ELECTRON
+/run/beamOn 100000000
+
+ # ---------------------------------------------------------------------------- #
+ #                                    PROTONS                                   #
+ # ---------------------------------------------------------------------------- #
+
+/gps/particle proton
+/gps/ene/min 0.01 MeV
+/gps/ene/max 100 MeV
+
+/NameOfFile/NameOfFile 20_07_2022_PROTON
+/run/beamOn 100000000
+
+ # ---------------------------------------------------------------------------- #
+ #                                     ALPHA                                    #
+ # ---------------------------------------------------------------------------- #
+
+/gps/particle alpha
+/gps/ene/min 2 MeV
+/gps/ene/max 400 MeV
+
+/NameOfFile/NameOfFile 20_07_2022_ALPHA
+/run/beamOn 100000000
+
+ # ---------------------------------------------------------------------------- #
+ #                                     MUONS                                    #
+ # ---------------------------------------------------------------------------- #
+
+/gps/particle mu-
+/gps/ene/min 10 GeV
+/gps/ene/max 100 GeV
+
+/NameOfFile/NameOfFile 20_07_2022_MUON
+/run/beamOn 100000000

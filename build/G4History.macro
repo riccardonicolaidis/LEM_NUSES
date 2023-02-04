@@ -1,0 +1,104 @@
+/run/verbose 2
+/vis/open OGL 600x600-0+0
+/vis/sceneHandler/create OGL
+/vis/viewer/create ! ! 600x600-0+0
+/vis/viewer/refresh
+/vis/viewer/set/viewpointThetaPhi 180. 0.
+/vis/viewer/zoom 1.2
+/vis/drawVolume
+/vis/scene/create
+/vis/scene/add/volume world -1 -1 none m 0 0 0 0 0 0
+/vis/sceneHandler/attach
+/vis/viewer/set/autoRefresh false
+/vis/viewer/set/auxiliaryEdge true
+/vis/viewer/set/lineSegmentsPerCircle 100
+/vis/scene/add/trajectories smooth
+/tracking/storeTrajectory 2
+/vis/scene/notifyHandlers
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/scene/notifyHandlers scene-0
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 1
+/vis/scene/notifyHandlers scene-0
+/vis/set/textColour green
+/vis/set/textLayout right
+/vis/scene/add/text2D 0.9 -.9 10 ! ! Low Energy Module
+/vis/scene/notifyHandlers
+/vis/set/textLayout
+/vis/set/textColour
+/vis/set/colour red
+/vis/set/lineWidth 3
+/vis/scene/add/frame
+/vis/scene/notifyHandlers
+/vis/set/colour
+/vis/geometry/set/visibility logicWorld 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility logicContainer 0 false
+/vis/scene/notifyHandlers
+/vis/viewer/set/style surface
+/vis/geometry/set/forceWireframe logicScintVeto
+/vis/scene/notifyHandlers
+/vis/geometry/set/forceSolid logicScintVeto
+/vis/scene/notifyHandlers
+/vis/geometry/set/lineWidth logicScintVeto -1 2
+/vis/scene/notifyHandlers
+/vis/geometry/set/forceAuxEdgeVisible logicScintVeto
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour logicScintVeto 0 0.3 0.3 1 1
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour logicDrilledVeto 0 0.3 0.3 1. 1
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour logicDrilledAl 0 0.6 0.6 0.6 1
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour logicPCBThin 0 1. 0.4 0.2 1
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour logicPCBThick 0 1. 0.4 0.2 1
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour logicLateralVeto 0 0.3 0.8 8 1
+/vis/scene/notifyHandlers
+/vis/viewer/set/hiddenMarker false
+/vis/scene/add/hits
+/vis/scene/notifyHandlers
+/vis/scene/endOfEventAction accumulate 10
+/vis/ogl/set/displayListLimit 10000000
+/vis/viewer/set/autoRefresh true
+/vis/viewer/refresh
+/vis/viewer/set/lightsVector 1 0 0
+/vis/viewer/refresh
+/vis/viewer/set/viewpointVector 1 0 0
+/vis/viewer/refresh
+/vis/viewer/set/globalMarkerScale 1
+/vis/viewer/refresh
+/vis/viewer/set/globalLineWidthScale 1
+/vis/viewer/refresh
+/vis/viewer/set/rotationStyle freeRotation
+/vis/viewer/refresh
+/vis/viewer/set/viewpointVector -1 0 0
+/vis/viewer/refresh
+/vis/viewer/set/viewpointThetaPhi 90 180 deg
+/vis/viewer/refresh
+/vis/viewer/set/lightsVector -1 0 0
+/vis/viewer/refresh
+/vis/viewer/addCutawayPlane 0 0 0 m 1 0 0
+/vis/viewer/refresh
+/control/execute default_generator.mac
+/gps/verbose 2
+/gps/particle geantino
+/gps/pos/type Plane
+/gps/pos/shape Square
+/gps/pos/centre 0 0 -2.4 cm
+/gps/pos/halfx 6.0 cm
+/gps/pos/halfy 6.0 cm
+/gps/ang/type iso
+/gps/ene/type Lin
+/gps/ene/min 1 MeV
+/gps/ene/max 100 MeV
+/gps/ene/gradient 0
+/gps/ene/intercept 1
+/gps/ang/maxtheta 90 deg
+/gps/ang/mintheta 0 deg
+/gun/particle e-
+/particleEnergyRandom/Ek_min 0.1
+/particleEnergyRandom/Ek_max 0.7
+/particleEnergyRandom/DebbuggingModeIsOn true
+/NameOfFile/NameOfFile ProvaFile.root

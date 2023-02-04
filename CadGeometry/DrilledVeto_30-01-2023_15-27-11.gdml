@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <define>
+    <matrix coldim="2" name="RINDEX0x55971e9d8ef0" values="3.1 1.58 2.91765 1.58 2.48 1.58"/>
+    <matrix coldim="2" name="GROUPVEL0x55971e9d8fb0" values="2.48 189.742 3.00882 189.742 3.1 189.742"/>
+    <matrix coldim="2" name="ABSLENGTH0x55971e9d9110" values="3.1 3800 2.91765 3800 2.48 3800"/>
+  </define>
+
+  <materials>
+    <isotope N="12" Z="6" name="C120x55971e9c7e10">
+      <atom unit="g/mole" value="12"/>
+    </isotope>
+    <isotope N="13" Z="6" name="C130x55971e9c7e60">
+      <atom unit="g/mole" value="13.0034"/>
+    </isotope>
+    <element name="C0x55971e9c7f00">
+      <fraction n="0.9893" ref="C120x55971e9c7e10"/>
+      <fraction n="0.0107" ref="C130x55971e9c7e60"/>
+    </element>
+    <isotope N="1" Z="1" name="H10x55971e9c8040">
+      <atom unit="g/mole" value="1.00782503081372"/>
+    </isotope>
+    <isotope N="2" Z="1" name="H20x55971e9c8090">
+      <atom unit="g/mole" value="2.01410199966617"/>
+    </isotope>
+    <element name="H0x55971e9c80e0">
+      <fraction n="0.999885" ref="H10x55971e9c8040"/>
+      <fraction n="0.000115" ref="H20x55971e9c8090"/>
+    </element>
+    <material name="G4_PLASTIC_SC_VINYLTOLUENE0x55971e9c7ca0" state="solid">
+      <property name="RINDEX" ref="RINDEX0x55971e9d8ef0"/>
+      <property name="GROUPVEL" ref="GROUPVEL0x55971e9d8fb0"/>
+      <property name="ABSLENGTH" ref="ABSLENGTH0x55971e9d9110"/>
+      <T unit="K" value="293.15"/>
+      <MEE unit="eV" value="64.7"/>
+      <D unit="g/cm3" value="1.032"/>
+      <fraction n="0.914708531800025" ref="C0x55971e9c7f00"/>
+      <fraction n="0.0852914681999746" ref="H0x55971e9c80e0"/>
+    </material>
+  </materials>
+
+  <solids>
+    <box lunit="mm" name="solidDrilledVeto0x55971f1a1670" x="80" y="80" z="8"/>
+    <tube aunit="deg" deltaphi="360" lunit="mm" name="solidHole0x55971f18f820" rmax="2.52313252202016" rmin="0" startphi="0" z="60"/>
+    <subtraction name="solidFinalDrilledVeto0x55971f19ae60">
+      <first ref="solidDrilledVeto0x55971f1a1670"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f19ae60_pos" unit="mm" x="0" y="0" z="8.1"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f19b9c0">
+      <first ref="solidFinalDrilledVeto0x55971f19ae60"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f19b9c0_pos" unit="mm" x="24" y="0" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f19b9c0_rot" unit="deg" x="0" y="-10" z="0"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1a0230">
+      <first ref="solidFinalDrilledVeto0x55971f19b9c0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1a0230_pos" unit="mm" x="23.5087185900599" y="4.83116448212784" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1a0230_rot" unit="deg" x="2.08590604489812" y="-10.0437366329936" z="-0.183315480295382"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1ad2d0">
+      <first ref="solidFinalDrilledVeto0x55971f1a0230"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1ad2d0_pos" unit="mm" x="22.0549874788855" y="9.46454052271964" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1ad2d0_rot" unit="deg" x="4.38873703504588" y="-10.1106963820121" z="-0.388425553836268"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1b39d0">
+      <first ref="solidFinalDrilledVeto0x55971f1ad2d0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1b39d0_pos" unit="mm" x="19.6983225889746" y="13.710437162275" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1b39d0_rot" unit="deg" x="7.06491921787241" y="-10.0212889224592" z="-0.620202903693755"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1afaa0">
+      <first ref="solidFinalDrilledVeto0x55971f1b39d0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1afaa0_pos" unit="mm" x="16.5352060578165" y="17.3950268934989" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1afaa0_rot" unit="deg" x="10.159893124972" y="-9.51861820851646" z="-0.848092141026489"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1b4070">
+      <first ref="solidFinalDrilledVeto0x55971f1afaa0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1b4070_pos" unit="mm" x="12.6951362478471" y="20.367462179874" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1b4070_rot" unit="deg" x="13.5796603688261" y="-8.32613622807877" z="-0.993056159841781"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1c3120">
+      <first ref="solidFinalDrilledVeto0x55971f1b4070"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1c3120_pos" unit="mm" x="8.33532606827569" y="22.5060511715299" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1c3120_rot" unit="deg" x="17.0962269307627" y="-6.21373196714445" z="-0.934879340151958"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1c6040">
+      <first ref="solidFinalDrilledVeto0x55971f1c3120"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1c6040_pos" unit="mm" x="3.63426666010984" y="23.7232397838747" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1c6040_rot" unit="deg" x="20.3891769544362" y="-3.05510020120766" z="-0.549527396913735"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1b9450">
+      <first ref="solidFinalDrilledVeto0x55971f1c6040"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1b9450_pos" unit="mm" x="-1.2155800521291" y="23.9691961721053" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1b9450_rot" unit="deg" x="23.1065412857513" y="1.14017369200755" z="0.233082492755495"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1d3600">
+      <first ref="solidFinalDrilledVeto0x55971f1b9450"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1d3600_pos" unit="mm" x="-6.01566077420929" y="23.2338508527889" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1d3600_rot" unit="deg" x="24.9155211680572" y="6.22506079886081" z="1.3765369753129"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1b9b80">
+      <first ref="solidFinalDrilledVeto0x55971f1d3600"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1b9b80_pos" unit="mm" x="-10.5694596373832" y="21.5473089496978" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1b9b80_rot" unit="deg" x="25.5230837805181" y="11.9340678620119" z="2.71223915062701"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1d76a0">
+      <first ref="solidFinalDrilledVeto0x55971f1b9b80"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1d76a0_pos" unit="mm" x="-14.6905435811439" y="18.9786176865048" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1d76a0_rot" unit="deg" x="24.6713794325299" y="17.9057416302926" z="3.9463913344393"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1d8110">
+      <first ref="solidFinalDrilledVeto0x55971f1d76a0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1d8110_pos" unit="mm" x="-18.210194944627" y="15.6329395853333" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1d8110_rot" unit="deg" x="22.1353784619115" y="23.6973980868396" z="4.69995951919822"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1dad30">
+      <first ref="solidFinalDrilledVeto0x55971f1d8110"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1dad30_pos" unit="mm" x="-20.98431878747" y="11.6472471007459" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1dad30_rot" unit="deg" x="17.7630828842243" y="28.7954842623256" z="4.59445339413629"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1e2550">
+      <first ref="solidFinalDrilledVeto0x55971f1dad30"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1e2550_pos" unit="mm" x="-22.8993421536012" y="7.18471495136059" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1e2550_rot" unit="deg" x="11.5952153175741" y="32.6444753333386" z="3.40619700174516"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1d1670">
+      <first ref="solidFinalDrilledVeto0x55971f1e2550"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1d1670_pos" unit="mm" x="-23.8768637614055" y="2.42803972769839" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1d1670_rot" unit="deg" x="4.04238300982374" y="34.7307752165588" z="1.26459801795532"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1ce8c0">
+      <first ref="solidFinalDrilledVeto0x55971f1d1670"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1ce8c0_pos" unit="mm" x="-23.8768637614055" y="-2.42803972769837" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1ce8c0_rot" unit="deg" x="-4.04238300982371" y="34.7307752165588" z="-1.26459801795531"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1da940">
+      <first ref="solidFinalDrilledVeto0x55971f1ce8c0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1da940_pos" unit="mm" x="-22.8993421536012" y="-7.1847149513606" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1da940_rot" unit="deg" x="-11.5952153175741" y="32.6444753333386" z="-3.40619700174516"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1f7be0">
+      <first ref="solidFinalDrilledVeto0x55971f1da940"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1f7be0_pos" unit="mm" x="-20.98431878747" y="-11.6472471007459" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1f7be0_rot" unit="deg" x="-17.7630828842243" y="28.7954842623256" z="-4.59445339413629"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f203d90">
+      <first ref="solidFinalDrilledVeto0x55971f1f7be0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f203d90_pos" unit="mm" x="-18.210194944627" y="-15.6329395853333" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f203d90_rot" unit="deg" x="-22.1353784619115" y="23.6973980868396" z="-4.69995951919822"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f205380">
+      <first ref="solidFinalDrilledVeto0x55971f203d90"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f205380_pos" unit="mm" x="-14.6905435811439" y="-18.9786176865048" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f205380_rot" unit="deg" x="-24.6713794325299" y="17.9057416302926" z="-3.9463913344393"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1ff7e0">
+      <first ref="solidFinalDrilledVeto0x55971f205380"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1ff7e0_pos" unit="mm" x="-10.5694596373832" y="-21.5473089496978" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1ff7e0_rot" unit="deg" x="-25.5230837805181" y="11.9340678620119" z="-2.71223915062701"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1befc0">
+      <first ref="solidFinalDrilledVeto0x55971f1ff7e0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1befc0_pos" unit="mm" x="-6.01566077420931" y="-23.2338508527889" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1befc0_rot" unit="deg" x="-24.9155211680572" y="6.22506079886084" z="-1.37653697531291"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f20b4e0">
+      <first ref="solidFinalDrilledVeto0x55971f1befc0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f20b4e0_pos" unit="mm" x="-1.21558005212913" y="-23.9691961721053" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f20b4e0_rot" unit="deg" x="-23.1065412857513" y="1.14017369200757" z="-0.2330824927555"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f214300">
+      <first ref="solidFinalDrilledVeto0x55971f20b4e0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f214300_pos" unit="mm" x="3.63426666010984" y="-23.7232397838747" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f214300_rot" unit="deg" x="-20.3891769544362" y="-3.05510020120766" z="0.549527396913736"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f21d570">
+      <first ref="solidFinalDrilledVeto0x55971f214300"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f21d570_pos" unit="mm" x="8.33532606827569" y="-22.5060511715299" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f21d570_rot" unit="deg" x="-17.0962269307627" y="-6.21373196714445" z="0.934879340151958"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f21c8b0">
+      <first ref="solidFinalDrilledVeto0x55971f21d570"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f21c8b0_pos" unit="mm" x="12.6951362478471" y="-20.367462179874" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f21c8b0_rot" unit="deg" x="-13.5796603688261" y="-8.32613622807876" z="0.993056159841781"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1e7190">
+      <first ref="solidFinalDrilledVeto0x55971f21c8b0"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1e7190_pos" unit="mm" x="16.5352060578165" y="-17.3950268934989" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1e7190_rot" unit="deg" x="-10.159893124972" y="-9.51861820851647" z="0.848092141026489"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1c0f20">
+      <first ref="solidFinalDrilledVeto0x55971f1e7190"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1c0f20_pos" unit="mm" x="19.6983225889746" y="-13.710437162275" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1c0f20_rot" unit="deg" x="-7.06491921787242" y="-10.0212889224592" z="0.620202903693755"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f21a620">
+      <first ref="solidFinalDrilledVeto0x55971f1c0f20"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f21a620_pos" unit="mm" x="22.0549874788855" y="-9.46454052271965" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f21a620_rot" unit="deg" x="-4.38873703504588" y="-10.1106963820121" z="0.388425553836268"/>
+    </subtraction>
+    <subtraction name="solidFinalDrilledVeto0x55971f1c7b80">
+      <first ref="solidFinalDrilledVeto0x55971f21a620"/>
+      <second ref="solidHole0x55971f18f820"/>
+      <position name="solidFinalDrilledVeto0x55971f1c7b80_pos" unit="mm" x="23.5087185900599" y="-4.83116448212787" z="8.1"/>
+      <rotation name="solidFinalDrilledVeto0x55971f1c7b80_rot" unit="deg" x="-2.08590604489813" y="-10.0437366329936" z="0.183315480295383"/>
+    </subtraction>
+  </solids>
+
+  <structure>
+    <volume name="logicDrilledVeto0x55971f1c67b0">
+      <materialref ref="G4_PLASTIC_SC_VINYLTOLUENE0x55971e9c7ca0"/>
+      <solidref ref="solidFinalDrilledVeto0x55971f1c7b80"/>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="logicDrilledVeto0x55971f1c67b0"/>
+  </setup>
+
+</gdml>

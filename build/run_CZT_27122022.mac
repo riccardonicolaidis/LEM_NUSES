@@ -1,0 +1,34 @@
+# Run CZT 27 12 2022 #
+
+
+/particleEnergyRandom/DebbuggingModeIsOn true
+/particleEnergyRandom/IsExponential true
+
+
+
+
+# --------------------------------- ELECTRON --------------------------------- #
+
+/gun/particle e-
+/particleEnergyRandom/Ek_min 0.094
+/particleEnergyRandom/Ek_max 10.0
+/NameOfFile/NameOfFile ELECTRON_27122022
+/run/beamOn 1000000
+
+
+# ----------------------------------- PROTON --------------------------------- #
+
+/gun/particle proton
+/particleEnergyRandom/Ek_min 3.
+/particleEnergyRandom/Ek_max 100.0
+/NameOfFile/NameOfFile PROTON_27122022
+/run/beamOn 1000000
+
+
+# ----------------------------------- ALPHA ---------------------------------- #
+
+/gun/particle alpha
+/particleEnergyRandom/Ek_min 10.
+/particleEnergyRandom/Ek_max 320.0
+/NameOfFile/NameOfFile ALPHA_27122022
+/run/beamOn 1000000
