@@ -865,12 +865,11 @@ void MyDetectorConstruction::ConstructSDandField()
   G4SDManager::GetSDMpointer()->AddNewDetector(aVetoDrilledSD);
   SetSensitiveDetector( logicDrilledVeto, aVetoDrilledSD ); 
 
-  // Lateral Veto SENSITIVE DETECTOR
-  G4String LateralVetoSD = "LateralVeto";
-  MySensitiveDetector* aLateralVetoSD = new MySensitiveDetector(LateralVetoSD, "LateralVeto");
-  G4SDManager::GetSDMpointer()->AddNewDetector(aLateralVetoSD);
-  SetSensitiveDetector( logicLateralVeto, aLateralVetoSD );
-
+  // Bottom Veto Sensitive Detector
+  G4String BottomVetoSD = "BottomVeto";
+  MySensitiveDetector* aBottomVetoSD = new MySensitiveDetector(BottomVetoSD, "BottomVeto");
+  G4SDManager::GetSDMpointer()->AddNewDetector(aBottomVetoSD);
+  SetSensitiveDetector( logicBottomVeto, aBottomVetoSD );
 }
 
 

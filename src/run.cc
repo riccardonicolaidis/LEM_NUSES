@@ -38,17 +38,11 @@ MyRunAction::MyRunAction(MyDetectorConstruction* det, MyPrimaryGenerator* prim)
     for(int i = 0; i < (N_PL_SCINT_NO_VETO+1); ++i)
     {
         NameTupleColumn = "Ed_Veto" + std::to_string(i);
-        man -> CreateNtupleDColumn(NameTupleColumn);          // 8 9 10 11 12
+        man -> CreateNtupleDColumn(NameTupleColumn);// 8
     }
-    man -> CreateNtupleDColumn("Ed_DrilledVeto");   // 13
-
-    for(int i = 0; i < 4; ++i)
-    {
-        NameTupleColumn = "Ed_Lateral" + std::to_string(i);
-        man -> CreateNtupleDColumn(NameTupleColumn);          // 15 16 17 18
-    }
-
-    man -> CreateNtupleDColumn("NumberID");         // 14
+    man -> CreateNtupleDColumn("Ed_DrilledVeto");   // 9
+    man -> CreateNtupleDColumn("Ed_BottomVeto");    // 10
+    man -> CreateNtupleDColumn("NumberID");         // 11
 
 
     for(G4int i = 0; i < N_SENSORS ; ++i)

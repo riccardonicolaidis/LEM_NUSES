@@ -23,15 +23,15 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
   G4VHitsCollection* hc_Thick       = event->GetHCofThisEvent()->GetHC(1);
   G4VHitsCollection* hc_Veto        = event->GetHCofThisEvent()->GetHC(2);
   G4VHitsCollection* hc_VetoDrilled = event->GetHCofThisEvent()->GetHC(3);
-  G4VHitsCollection* hc_Lateral     = event->GetHCofThisEvent()->GetHC(4);
+  G4VHitsCollection* hc_BottomVeto  = event->GetHCofThisEvent()->GetHC(4);
 
   // DEFINITIONS OF THE VECTORS
 
   G4double Ed_Thin [N_SENSORS];
   G4double Ed_Thick[N_SENSORS];
   G4double Ed_Veto[N_PL_SCINT_NO_VETO+1];
-  G4double Ed_Lateral[4];
   G4double Ed_VetoDrilled = 0.;
+  G4double Ed_BottomVeto = 0.;
 
   G4double EdepInside = 0.;
 
@@ -49,10 +49,7 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
     Ed_Veto[i] = 0.;
   }
 
-  for(G4int i = 0; i < 4; ++i)
-  {
-    Ed_Lateral[i] = 0.;
-  }
+  Ed_BottomVeto = 0.;
 
   // ENERGY MEASUREMENTS
 
@@ -84,10 +81,10 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
     Ed_VetoDrilled+=hit->GetEdep(); //adding the energies of the steps inside each detector, identified with chamber number
   }
 
-  for(G4int iH=0;iH < (hc_Lateral->GetSize());++iH){
-    HitClass* hit=static_cast<HitClass*>(hc_Lateral->GetHit(iH));
+  for(G4int iH=0;iH < (hc_BottomVeto->GetSize());++iH){
+    HitClass* hit=static_cast<HitClass*>(hc_BottomVeto->GetHit(iH));
     ReplicaNo = hit-> GetReplicaNb();
-    Ed_Lateral[ReplicaNo]+=hit->GetEdep(); //adding the energies of the steps inside each detector, identified with chamber number
+    Ed_BottomVeto+=hit->GetEdep(); //adding the energies of the steps inside each detector, identified with chamber number
   }
 
   G4int CurrentTuple = 8;
@@ -98,11 +95,7 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
   }
   
   man -> FillNtupleDColumn(0, CurrentTuple++, Ed_VetoDrilled);
-
-  for(G4int i = 0; i < 4; ++i)
-  {
-    man -> FillNtupleDColumn(0, CurrentTuple++, Ed_Lateral[i]);
-  }
+  man -> FillNtupleDColumn(0, CurrentTuple++, Ed_BottomVeto);
 
 
 

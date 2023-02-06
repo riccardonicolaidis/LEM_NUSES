@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "./include/**",
                 "./src/**",
-                "/home/riccardo/GEANT/geant4-install/**"
+                "/home/riccardo/GEANT/geant4-install/**",
+                "/home/riccardo/root-install/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

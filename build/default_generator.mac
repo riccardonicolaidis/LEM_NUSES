@@ -5,9 +5,9 @@
 /gps/particle geantino
 /gps/pos/type Plane
 /gps/pos/shape Square
-/gps/pos/centre 0 0 -2.4 cm
-/gps/pos/halfx 6.0 cm
-/gps/pos/halfy 6.0 cm
+/gps/pos/centre 0 0 -3.4 cm
+/gps/pos/halfx 2.0 cm
+/gps/pos/halfy 2.0 cm
 /gps/ang/type iso
 /gps/ene/type Lin
 /gps/ene/min 1 MeV
@@ -24,12 +24,11 @@
 /gun/particle e-
 /particleEnergyRandom/Ek_min 0.1
 /particleEnergyRandom/Ek_max 0.7
-/particleEnergyRandom/DebbuggingModeIsOn true
+/particleEnergyRandom/DebbuggingModeIsOn false
 
 # ---------------------------------------------------------------------------- #
 #                       DEFAULT FILE NAME FOR SAVING DATA                      #
 # ---------------------------------------------------------------------------- #
 /NameOfFile/NameOfFile ProvaFile.root
-
 
 
