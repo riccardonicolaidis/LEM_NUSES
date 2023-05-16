@@ -773,6 +773,11 @@ CMakeFiles/Simulation.dir/Simulation.cc.o: \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4VTrajectoryModel.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4VRML2File.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4GMocrenFile.hh \
+ /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpenGLImmediateX.hh \
+ /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpenGLStoredX.hh \
+ /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpenGLImmediateXm.hh \
+ /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpenGLXm.hh \
+ /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpenGLStoredXm.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpenGLImmediateQt.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpenGLQt.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpenGLStoredQt.hh \
@@ -787,7 +792,7 @@ CMakeFiles/Simulation.dir/Simulation.cc.o: \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpticalParameters.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpticalPhysics.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4OpticalParameters.hh \
- /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/construction.hh \
+ /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/construction_new.hh \
  /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/myglobals.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4GeometryManager.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4SmartVoxelStat.hh \
@@ -1043,6 +1048,7 @@ CMakeFiles/Simulation.dir/Simulation.cc.o: \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4GDMLParser.icc \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4MaterialTable.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4VisAttributes.hh \
+ /home/riccardo/GEANT/geant4-install/include/Geant4/G4Cons.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4LogicalBorderSurface.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4LogicalSurface.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4LogicalSurface.icc \
@@ -1053,6 +1059,10 @@ CMakeFiles/Simulation.dir/Simulation.cc.o: \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4Physics2DVector.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4Physics2DVector.icc \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4SurfaceProperty.hh \
+ /home/riccardo/GEANT/geant4-install/include/Geant4/G4Region.hh \
+ /home/riccardo/GEANT/geant4-install/include/Geant4/G4UserLimits.hh \
+ /home/riccardo/GEANT/geant4-install/include/Geant4/G4UserLimits.icc \
+ /home/riccardo/GEANT/geant4-install/include/Geant4/G4ProductionCuts.hh \
  /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/Analysis.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4AnalysisManager.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4GenericAnalysisManager.hh \
@@ -1129,13 +1139,6 @@ CMakeFiles/Simulation.dir/Simulation.cc.o: \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4THitsCollection.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4Allocator.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/tls.hh \
- /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/construction_new.hh \
- /home/riccardo/GEANT/geant4-install/include/Geant4/G4Cons.hh \
- /home/riccardo/GEANT/geant4-install/include/Geant4/G4Region.hh \
- /home/riccardo/GEANT/geant4-install/include/Geant4/G4UserLimits.hh \
- /home/riccardo/GEANT/geant4-install/include/Geant4/G4UserLimits.icc \
- /home/riccardo/GEANT/geant4-install/include/Geant4/G4ProductionCuts.hh \
- /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/construction_new2.hh \
  /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/action.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4VUserActionInitialization.hh \
  /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/generator.hh \
@@ -1159,7 +1162,6 @@ CMakeFiles/Simulation.dir/Simulation.cc.o: \
  /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/run.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4UserRunAction.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4Run.hh \
- /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/construction.hh \
  /home/riccardo/Documenti/GeantProjects/LEM_NUSES/include/stepping.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/G4UserSteppingAction.hh \
  /home/riccardo/GEANT/geant4-install/include/Geant4/globals.hh \

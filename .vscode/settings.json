@@ -75,6 +75,12 @@
         "valarray": "cpp",
         "variant": "cpp",
         "AngleResolution.C": "cpp",
-        "AngleResolutionDescoped.C": "cpp"
+        "AngleResolutionDescoped.C": "cpp",
+        "AnalysisSimulation.C": "cpp",
+        "Energy.C": "cpp",
+        "AnalysisSimulation3.C": "cpp",
+        "AnalysisSimulationDescoped.C": "cpp",
+        "GeometricalFactor.C": "cpp",
+        "GeometricalFactorDescoped.C": "cpp"
     }
 }

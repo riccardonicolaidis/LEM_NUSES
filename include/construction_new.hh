@@ -45,9 +45,6 @@
 #include "detector.hh"
 
 
-#if NEW_GEOMETRY == 1
-
-
 class MyDetectorConstruction : public G4VUserDetectorConstruction
 {
 public:
@@ -279,12 +276,4 @@ private:
 
 
 
-
-
-
-
-
-
-
-#endif
 #endif

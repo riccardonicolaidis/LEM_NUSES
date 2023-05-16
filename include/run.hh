@@ -7,7 +7,6 @@
 #include "G4GenericMessenger.hh"
 
 
-#include "construction.hh"
 #include "generator.hh"
 
 

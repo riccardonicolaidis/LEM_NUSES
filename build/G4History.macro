@@ -44,17 +44,17 @@
 /vis/scene/notifyHandlers
 /vis/geometry/set/forceAuxEdgeVisible logicScintVeto
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour logicScintVeto 0 0.3 0.3 1 1
+/vis/geometry/set/colour logicScintVeto 0 0.3 0.3 1. 1.
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour logicDrilledVeto 0 0.3 0.3 1. 1
+/vis/geometry/set/colour logicDrilledVeto 0 0.3 0.3 1. 0.4
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour logicDrilledAl 0 0.6 0.6 0.6 1
+/vis/geometry/set/colour logicDrilledAl 0 0.6 0.6 0.6 0.3
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour logicPCBThin 0 1. 0.4 0.2 1
+/vis/geometry/set/colour logicPCBThin 0 1. 0.4 0.2 0.8
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour logicPCBThick 0 1. 0.4 0.2 1
+/vis/geometry/set/colour logicPCBThick 0 1. 0.4 0.2 0.8
 /vis/scene/notifyHandlers
-/vis/geometry/set/colour logicLateralVeto 0 0.3 0.8 8 1
+/vis/geometry/set/colour logicBottomVeto 0 0.8 0.4 0 0.4
 /vis/scene/notifyHandlers
 /vis/viewer/set/hiddenMarker false
 /vis/scene/add/hits
@@ -71,34 +71,128 @@
 /vis/viewer/refresh
 /vis/viewer/set/globalLineWidthScale 1
 /vis/viewer/refresh
-/vis/viewer/set/rotationStyle freeRotation
-/vis/viewer/refresh
 /vis/viewer/set/viewpointVector -1 0 0
-/vis/viewer/refresh
-/vis/viewer/set/viewpointThetaPhi 90 180 deg
 /vis/viewer/refresh
 /vis/viewer/set/lightsVector -1 0 0
 /vis/viewer/refresh
-/vis/viewer/addCutawayPlane 0 0 0 m 1 0 0
-/vis/viewer/refresh
 /control/execute default_generator.mac
-/gps/verbose 2
-/gps/particle geantino
+/particleEnergyRandom/DebbuggingModeIsOn false
+/gps/verbose 0
 /gps/pos/type Plane
-/gps/pos/shape Square
-/gps/pos/centre 0 0 -3.4 cm
-/gps/pos/halfx 2.0 cm
-/gps/pos/halfy 2.0 cm
+/gps/pos/shape Circle
+/gps/pos/centre 0 0 -3.3 cm
+/gps/pos/radius 1.8 cm
 /gps/ang/type iso
 /gps/ene/type Lin
-/gps/ene/min 1 MeV
-/gps/ene/max 100 MeV
 /gps/ene/gradient 0
 /gps/ene/intercept 1
 /gps/ang/maxtheta 90 deg
 /gps/ang/mintheta 0 deg
+/gps/particle e-
+/gps/ene/min 0.001 MeV
+/gps/ene/max 7 MeV
 /gun/particle e-
 /particleEnergyRandom/Ek_min 0.1
 /particleEnergyRandom/Ek_max 0.7
 /particleEnergyRandom/DebbuggingModeIsOn false
 /NameOfFile/NameOfFile ProvaFile.root
+/vis/scene/add/axes 0 0 0 10 cm
+/vis/scene/notifyHandlers
+/run/beamOn 100
+/vis/scene/notifyHandlers scene-0
+/gps/pos/centre 0 0 3.3 cm
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/gps/pos/centre 0 0 7.3 cm
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/gps/pos/centre 0 0 -7.3 cm
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/gps/pos/centre 0 0 7.3 cm
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1

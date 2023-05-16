@@ -1,22 +1,14 @@
 #include "construction_new.hh"
 #include "myglobals.hh"
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
 
-/*        NEW GEOMETRY LOW ENERGY MODULE
-* Here I am going to define the new geometry for the Low Energy Module
-* with the new approach considering Silicon detectors bonded to the PCB
-* In this design, it is also possible to consider CZT detectors
-*
-*/
-
-
 using namespace std;
 
 
-#if NEW_GEOMETRY == 1
 
 
 MyDetectorConstruction::MyDetectorConstruction()
@@ -40,18 +32,17 @@ void MyDetectorConstruction::DefineMaterials()
   SiMat -> AddElement(Si,1);
 
   EJ200     = nist -> FindOrBuildMaterial("G4_PLASTIC_SC_VINYLTOLUENE");
-  CdZnTe    = nist -> FindOrBuildMaterial("G4_CADMIUM_TELLURIDE");
   worldMat  = nist -> FindOrBuildMaterial("G4_Galactic");
   Al        = nist -> FindOrBuildMaterial("G4_Al");
   bachelite = nist -> FindOrBuildMaterial("G4_BAKELITE");
+
+  /* ---------------------------- REFRACTIVE INDEX ---------------------------- */
 
   std::vector<G4double> RIndexWorld   = {1.                , 1.                 , 1.};
   std::vector<G4double> RIndexSi      = {3.88163           , 3.88163            , 3.88163};
   std::vector<G4double> RIndexAl      = {3.88163           , 3.88163            , 3.88163};
   std::vector<G4double> RIndexEJ200   = {1.58              , 1.58               , 1.58};
   std::vector<G4double> RIndexCdZnTe  = {3.09              , 3.09               , 3.09};
- 
-
   std::vector<G4double> Wavelength0 = { 400 * nm, 425*nm, 500*nm};
   std::vector<G4double> Energy ;
 
@@ -60,16 +51,18 @@ void MyDetectorConstruction::DefineMaterials()
     Energy.push_back(1240*nm/Wavelength0[i]);
   }
 
+  /* ---------------------------- ABSORPTION LENGTH --------------------------- */
 
   std::vector<G4double> ABSL        = { 380. * cm, 380. * cm , 380. * cm  };
   std::vector<G4double> ABSL_Al     = { 0.1 * um, 0.1 * um , 0.1 * um  };
   std::vector<G4double> ABSL_Si     = { 0.1 * um, 0.1 * um , 0.1 * um  };
   std::vector<G4double> ABSL_CdZnTe = { 10 * um , 10 * um  , 10 * um   };
 
-  // Open a file called Efficiency.txt and read the values from a two column table
-  // The first column is the wavelength in nm and the second column is the efficiency
 
-  std::ifstream infile("/home/riccardo/Documenti/GeantProjects/LEM_simulation/src/Efficiency.txt");
+
+
+
+  std::ifstream infile("../src/Efficiency.txt");
   std::string line;
   std::vector<G4double> Wavelength;
   std::vector<G4double> Efficiency;
@@ -103,7 +96,6 @@ void MyDetectorConstruction::DefineMaterials()
   G4MaterialPropertiesTable *mptWorld   = new G4MaterialPropertiesTable();
   G4MaterialPropertiesTable *mptSi      = new G4MaterialPropertiesTable();
   G4MaterialPropertiesTable *mptEJ200   = new G4MaterialPropertiesTable();
-  G4MaterialPropertiesTable *mptCdZnTe  = new G4MaterialPropertiesTable();
   G4MaterialPropertiesTable *mptAl      = new G4MaterialPropertiesTable();
 
   
@@ -140,9 +132,6 @@ void MyDetectorConstruction::DefineMaterials()
   
   
 
-  mptCdZnTe   -> AddProperty("RINDEX", Energy, RIndexCdZnTe, 3);
-  mptCdZnTe   -> AddProperty("ABSLENGTH", Energy, ABSL_CdZnTe, 3);
-  CdZnTe      -> SetMaterialPropertiesTable(mptCdZnTe);
 
   mptAl       -> AddProperty("RINDEX", Energy, RIndexAl, 3);
   mptAl       -> AddProperty("ABSLENGTH", Energy, ABSL_Al, 3);
@@ -255,8 +244,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
   // Construction of the Drilled Veto
   // BIGGER than the Veto on the back of the instrument
-  LxDrilledVeto = LActive + 1.4*cm;
-  LyDrilledVeto = LActive + 1.4*cm;
+  LxDrilledVeto = LActive + 2*cm;
+  LyDrilledVeto = LActive + 2*cm;
   TkDrilledVeto = 2.*cm;
   
   xDrilledVeto = 0.;
@@ -341,13 +330,13 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     if(i == 0)// Add skin surface
     {
       physScintVeto  = new G4PVPlacement(0,G4ThreeVector(xScintVeto, yScintVeto, zScintVeto),logicScintVeto, "physScintVeto", logicContainer, false, i, true );
+      xScintVetoArray[i] = xScintVeto;
+      yScintVetoArray[i] = yScintVeto;
+      zScintVetoArray[i] = zScintVeto;
       if(OPTICAL_PROCESSES == 1)
       {
         G4String name = "SurfScintVeto" + std::to_string(0);
         logicSurfScintVeto[0] = new G4LogicalSkinSurface(name, logicScintVeto, opsurfVeto);
-        xScintVetoArray[i] = xScintVeto;
-        yScintVetoArray[i] = yScintVeto;
-        zScintVetoArray[i] = zScintVeto;
       }
     }
     else
@@ -378,14 +367,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
   logicSiDetThin = new G4LogicalVolume(solidSiDetThin, SiMat, "logicSiDetThin");
   TotalMass += (logicSiDetThin->GetMass())*16/kg;
-  if(CZT_DETECTOR == 1)
-  {
-    logicSiDetThick = new G4LogicalVolume(solidSiDetThick, CdZnTe, "logicSiDetThick");
-  }
-  else
-  {
-    logicSiDetThick = new G4LogicalVolume(solidSiDetThick, SiMat, "logicSiDetThick");
-  }
+  logicSiDetThick = new G4LogicalVolume(solidSiDetThick, SiMat, "logicSiDetThick");
+  
   
   TotalMass += (logicSiDetThick->GetMass())*16/kg;
   visSiDetThin = new G4VisAttributes(G4Colour(1.0,1.0,1.0));
@@ -401,15 +384,15 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   G4Region* region = new G4Region("SiDetRegion");
   region->AddRootLogicalVolume(logicSiDetThin);
   region->AddRootLogicalVolume(logicSiDetThick);
-  region->AddRootLogicalVolume(logicScintVeto);
+  //region->AddRootLogicalVolume(logicScintVeto);
 
   G4ProductionCuts* cuts = new G4ProductionCuts;
-  cuts -> SetProductionCut(1*um, "gamma");
-  cuts -> SetProductionCut(1*um, "e-");
-  cuts -> SetProductionCut(1*um, "e+");
-  cuts -> SetProductionCut(1*um, "proton");
-  cuts -> SetProductionCut(1*um, "alpha");
-  cuts -> SetProductionCut(1*um, "neutron");
+  cuts -> SetProductionCut(10*um, "gamma");
+  cuts -> SetProductionCut(10*um, "e-");
+  cuts -> SetProductionCut(10*um, "e+");
+  cuts -> SetProductionCut(10*um, "proton");
+  cuts -> SetProductionCut(10*um, "alpha");
+  cuts -> SetProductionCut(10*um, "neutron");
   region->SetProductionCuts(cuts);
 
   /* -------------------------------------------------------------------------- */
@@ -417,11 +400,12 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   /* -------------------------------------------------------------------------- */
 
   G4UserLimits* stepLimit = new G4UserLimits();
-  stepLimit->SetMaxAllowedStep(1*um);
+  stepLimit->SetMaxAllowedStep(20*um);
   logicSiDetThin->SetUserLimits(stepLimit);
   logicSiDetThick->SetUserLimits(stepLimit);
-  logicScintVeto->SetUserLimits(stepLimit);
 
+
+  
 
 
 
@@ -739,7 +723,7 @@ solidFinalDrilledVeto = new G4SubtractionSolid("solidFinalDrilledVeto", solidFin
     G4RotationMatrix* rotLateralVeto = new G4RotationMatrix();
     if(i > 3)
       rotLateralVeto->rotateZ(90*deg);
-    new G4PVPlacement(rotLateralVeto, G4ThreeVector(xSiPM[i],ySiPM[i],zSiPM) , logicSiPM, "physSiPM", logicContainer, false, i, true);
+    //new G4PVPlacement(rotLateralVeto, G4ThreeVector(xSiPM[i],ySiPM[i],zSiPM) , logicSiPM, "physSiPM", logicContainer, false, i, true);
   }
 
 
@@ -749,7 +733,7 @@ solidFinalDrilledVeto = new G4SubtractionSolid("solidFinalDrilledVeto", solidFin
 
   xBottomVeto = xScintVeto;
   yBottomVeto = yScintVeto;
-  zBottomVeto = zScintVetoArray[N_PL_SCINT_NO_VETO] + TkScintVeto/2 +TkBottomVeto0 + 7*mm;
+  zBottomVeto = zScintVetoArray[N_PL_SCINT_NO_VETO] + TkScintVeto/2 +TkBottomVeto0/2. + 1*mm;
 
 
   LxBottomVeto0 = LxPCB + 1*mm + 2 * TkBottomVeto0;
@@ -757,7 +741,7 @@ solidFinalDrilledVeto = new G4SubtractionSolid("solidFinalDrilledVeto", solidFin
 
   LxBottomVeto1 = LxBottomVeto0 - 1.7 * TkBottomVeto0;
   LyBottomVeto1 = LyBottomVeto0 - 1.7 * TkBottomVeto0;
-  LzBottomVeto1 = abs(zDrilledVeto - zScintVetoArray[N_PL_SCINT_NO_VETO]) + TkCompenetration - TkDrilledVeto/2 + TkScintVeto/2 + TkBottomVeto0 + 1*mm;
+  LzBottomVeto1 = abs(zDrilledVeto - zScintVetoArray[N_PL_SCINT_NO_VETO]) + TkCompenetration - TkDrilledVeto/2 + TkScintVeto/2 - TkBottomVeto0/2. + 1*mm;
 
   solidBottomVeto0 = new G4Box("solidBottomVeto0", LxBottomVeto0*0.5, LyBottomVeto0*0.5, TkBottomVeto0*0.5);
   solidBottomVeto1Ext = new G4Box("solidBottomVeto1", LxBottomVeto0*0.5, LyBottomVeto0*0.5, LzBottomVeto1*0.5);
@@ -841,17 +825,20 @@ solidFinalDrilledVeto = new G4SubtractionSolid("solidFinalDrilledVeto", solidFin
 
 void MyDetectorConstruction::ConstructSDandField()
 {
-  // Thin Silicon 100 um or 300 um 
-  G4String ThinDetectorSD = "SiThin";
-  MySensitiveDetector* aThinDetectorSD = new MySensitiveDetector(ThinDetectorSD, "SiThin");
-  G4SDManager::GetSDMpointer()->AddNewDetector(aThinDetectorSD);
-  SetSensitiveDetector( logicSiDetThin, aThinDetectorSD ); 
   
   // Thick detector 500 Si or 2 mm CZT
   G4String ThickDetectorSD = "SiThick";
   MySensitiveDetector* aThickDetectorSD = new MySensitiveDetector(ThickDetectorSD, "SiThick");
   G4SDManager::GetSDMpointer()->AddNewDetector(aThickDetectorSD);
   SetSensitiveDetector( logicSiDetThick, aThickDetectorSD ); 
+
+  // Thin Silicon 100 um or 300 um 
+  G4String ThinDetectorSD = "SiThin";
+  MySensitiveDetector* aThinDetectorSD = new MySensitiveDetector(ThinDetectorSD, "SiThin");
+  G4SDManager::GetSDMpointer()->AddNewDetector(aThinDetectorSD);
+  SetSensitiveDetector( logicSiDetThin, aThinDetectorSD ); 
+
+
 
   // Plastic scintillator VETO BACK
   G4String VetoSD = "Veto";
@@ -871,10 +858,4 @@ void MyDetectorConstruction::ConstructSDandField()
   G4SDManager::GetSDMpointer()->AddNewDetector(aBottomVetoSD);
   SetSensitiveDetector( logicBottomVeto, aBottomVetoSD );
 }
-
-
-
-
-
-#endif
 

@@ -8,7 +8,6 @@
 #include "G4HadronicProcessType.hh"
 #include "G4SystemOfUnits.hh"
 
-#include "construction.hh"
 
 #include "Analysis.hh"
 

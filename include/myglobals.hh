@@ -4,7 +4,7 @@
 
 // Set the number of sensors in the X-Y plane
 
-#define N_SENSORS 8
+#define N_SENSORS 7
 #define IS_CONF_EPTAGONO true
 #define IS_CONF_QUADRATO true
 
@@ -13,7 +13,7 @@
 
 // Define the number of Plastic Scintillators
 // The veto at the bottom is not considered
-#define N_PL_SCINT_NO_VETO 0
+#define N_PL_SCINT_NO_VETO 1
 
 // Set to 1 to enable Scintillation processes
 // Scintillation is computationally expensive
@@ -39,18 +39,6 @@
 
 
 
-
-// Per la configurazione a stella
-
-
-
-// Select the geometry
-// Set to 1 to view the new geometry
-// Set to 0 to view the geometry from the Master thesis
-//      Here, the geometry is implemented with Ametek PIPS
-#define NEW_GEOMETRY 1
-
-#define CZT_DETECTOR 0
 
 
 #endif

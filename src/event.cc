@@ -19,8 +19,8 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
   //man -> FillNtupleDColumn(0,);
 
   // DEFINITIONS OF THE HISTOGRAMNS WITH COUNTS
-  G4VHitsCollection* hc_Thin        = event->GetHCofThisEvent()->GetHC(0);
-  G4VHitsCollection* hc_Thick       = event->GetHCofThisEvent()->GetHC(1);
+  G4VHitsCollection* hc_Thick       = event->GetHCofThisEvent()->GetHC(0);
+  G4VHitsCollection* hc_Thin        = event->GetHCofThisEvent()->GetHC(1);
   G4VHitsCollection* hc_Veto        = event->GetHCofThisEvent()->GetHC(2);
   G4VHitsCollection* hc_VetoDrilled = event->GetHCofThisEvent()->GetHC(3);
   G4VHitsCollection* hc_BottomVeto  = event->GetHCofThisEvent()->GetHC(4);

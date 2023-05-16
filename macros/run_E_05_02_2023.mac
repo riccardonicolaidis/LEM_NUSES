@@ -29,7 +29,7 @@
  #                                   ELECTRONS                                  #
  # ---------------------------------------------------------------------------- #
 
-/gps/particle e-
+/gun/particle e-
 /particleEnergyRandom/Ek_min 0.01 MeV
 /particleEnergyRandom/Ek_max 7 MeV
 
@@ -40,7 +40,7 @@
  #                                    PROTONS                                   #
  # ---------------------------------------------------------------------------- #
 
-/gps/particle proton
+/gun/particle proton
 /particleEnergyRandom/Ek_min 0.1 MeV
 /particleEnergyRandom/Ek_max 30 MeV
 
@@ -52,7 +52,7 @@
  #                                     ALPHA                                    #
  # ---------------------------------------------------------------------------- #
 
-/gps/particle alpha
+/gun/particle alpha
 /particleEnergyRandom/Ek_min 1 MeV
 /particleEnergyRandom/Ek_max 100 MeV
 

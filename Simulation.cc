@@ -1,29 +1,22 @@
+// GLOBAL VARIABLES
 #include "myglobals.hh"
 
-
+// SYSTEM INCLUDES
 #include <iostream>
 #include <string>
 #include <string_view>
 
+
+// GEANT4 INCLUDES
 #include "G4Types.hh"
 #include "G4GenericPhysicsList.hh"
 #include "G4VModularPhysicsList.hh"
-
 #include "G4RunManager.hh"
-//#include "G4UIExecutive.hh"
-//#include "G4VisManager.hh"
-//#include "G4VisExecutive.hh"
-//#include "G4UImanager.hh"
-
-
 #include "G4RunManagerFactory.hh"
 #include "G4SteppingVerbose.hh"
 #include "G4UImanager.hh"
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
-
-
-//#include "QGSP_BERT_HP.hh"
 #include "G4EmLowEPPhysics.hh"
 #include "G4StepLimiterPhysics.hh"
 #include "FTFP_BERT.hh"
@@ -32,12 +25,9 @@
 #include "G4OpticalParameters.hh"
 #include "G4OpticalPhysics.hh"
 
-#include "construction.hh"
+
+// USER INCLUDES
 #include "construction_new.hh"
-#include "construction_new2.hh"
-
-
-//#include "physics.hh"       
 #include "action.hh"       
 
 

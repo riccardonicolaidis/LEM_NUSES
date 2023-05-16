@@ -8,7 +8,6 @@
 #include "G4RunManager.hh"
 #include "G4UnitsTable.hh"
 
-#include "construction.hh"
 #include "event.hh"
 
 #include "Analysis.hh"

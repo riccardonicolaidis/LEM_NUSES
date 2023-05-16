@@ -1,0 +1,55 @@
+# ---------------------------------------------------------------------------- #
+#                                SIMULATION RUN                                #
+# ---------------------------------------------------------------------------- #
+#
+# - No debugging mode (random)
+# - Isotropic flux generation from a surface
+# - Electrons protons alpha muons
+# - Fine tuning for acceptance at low energies
+# - energy spectrum flat
+#
+#
+
+/particleEnergyRandom/DebbuggingModeIsOn true
+
+/gps/verbose 0
+/gps/pos/type Plane
+/gps/pos/shape Circle
+/gps/pos/centre 0 0 -3.3 cm
+/gps/pos/radius 1.8 cm
+/gps/ang/type iso
+/gps/ene/type Lin
+/gps/ene/gradient 0
+/gps/ene/intercept 1
+/gps/ang/maxtheta 90 deg
+/gps/ang/mintheta 0 deg
+
+ # ---------------------------------------------------------------------------- #
+ #                                   ELECTRONS                                  #
+ # ---------------------------------------------------------------------------- #
+
+/gun/particle e-
+/particleEnergyRandom/Ek_min 0.01
+/particleEnergyRandom/Ek_max 100
+/NameOfFile/NameOfFile ../DST_E_21022023/21_02_2023_ELECTRON
+/run/beamOn 1000000
+
+ # ---------------------------------------------------------------------------- #
+ #                                    PROTONS                                   #
+ # ---------------------------------------------------------------------------- #
+
+/gun/particle proton
+/particleEnergyRandom/Ek_min 0.01
+/particleEnergyRandom/Ek_max 5000
+/NameOfFile/NameOfFile ../DST_E_21022023/21_02_2023_PROTON
+/run/beamOn 1000000
+
+ # ---------------------------------------------------------------------------- #
+ #                                     ALPHA                                    #
+ # ---------------------------------------------------------------------------- #
+
+/gun/particle alpha
+/particleEnergyRandom/Ek_min 0.01
+/particleEnergyRandom/Ek_max 1000
+/NameOfFile/NameOfFile ../DST_E_21022023/21_02_2023_ALPHA
+/run/beamOn 1000000

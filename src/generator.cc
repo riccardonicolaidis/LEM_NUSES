@@ -57,7 +57,7 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
   if(DebuggingModeIsOn)
   {
     LActive            = 14.*cm;
-    zgen               =  -2.5*cm;
+    zgen               =  -5*cm;
     LThin              = 5.5 * cm;
     RadiusEptagon = 2.2*cm;
 

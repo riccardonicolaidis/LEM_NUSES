@@ -5,6 +5,9 @@
 #/run/initialize
 
 /vis/open OGL 600x600-0+0
+/vis/open DAWNFILE 1000x1000+600+400
+
+
 /vis/viewer/set/viewpointThetaPhi 180. 0.
 /vis/viewer/zoom 1.2
 /vis/drawVolume
@@ -59,13 +62,12 @@
 /vis/geometry/set/lineWidth logicScintVeto -1 2
 /vis/geometry/set/forceAuxEdgeVisible logicScintVeto
 
-/vis/geometry/set/colour logicScintVeto    0 0.3 0.3 1    1
-/vis/geometry/set/colour logicDrilledVeto  0 0.3 0.3 1. 1
-/vis/geometry/set/colour logicDrilledAl    0 0.6 0.6 0.6  1
-/vis/geometry/set/colour logicPCBThin      0 1. 0.4 0.2 1
-/vis/geometry/set/colour logicPCBThick     0 1. 0.4 0.2 1
-/vis/geometry/set/colour logicLateralVeto  0 0.3 0.8 8    1
-
+/vis/geometry/set/colour logicScintVeto    0 0.3 0.3 1.    1.
+/vis/geometry/set/colour logicDrilledVeto  0 0.3 0.3 1. 0.4
+/vis/geometry/set/colour logicDrilledAl    0 0.6 0.6 0.6  0.3
+/vis/geometry/set/colour logicPCBThin      0 1. 0.4 0.2 0.8
+/vis/geometry/set/colour logicPCBThick     0 1. 0.4 0.2 0.8
+/vis/geometry/set/colour logicBottomVeto   0 0.8 0.4 0 0.4
 /vis/viewer/set/hiddenMarker false
 
 
@@ -83,8 +85,15 @@
 /vis/viewer/set/globalLineWidthScale 1
 
 
-/vis/viewer/set/rotationStyle freeRotation
+#/vis/viewer/set/rotationStyle freeRotation
 /vis/viewer/set/viewpointVector -1 0 0
-/vis/viewer/set/viewpointThetaPhi 90 180 deg
+#/vis/viewer/set/viewpointThetaPhi 90 180 deg
 /vis/viewer/set/lightsVector -1 0 0
-/vis/viewer/addCutawayPlane 0 0 0 m 1 0 0
+#/vis/viewer/addCutawayPlane 0 0 0 m 1 0 0
+
+#/vis/viewer/set/viewpointVector 0 1 0
+#/vis/viewer/set/viewpointThetaPhi 90 180 deg
+#/vis/viewer/set/lightsVector 0 1 0
+
+
+/vis/viewer/flush
